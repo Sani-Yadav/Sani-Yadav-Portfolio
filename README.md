@@ -2,7 +2,7 @@
 
 🌐 [Visit My Portfolio](https://iamsani.netlify.app)  
 📧 saniyadav@example.com (replace with real email)  
-📍 Sultanpur, Uttar Pradesh, India
+📍 Sultanpur, Uttar Pradesh, India/
 
 ---
 
