@@ -25,8 +25,12 @@ SECRET_KEY = 'django-insecure-6c*1^zk2s^h8ysg*fw^#qhhx_=+y@!&x&!@ry5z*#+doam7*tf
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['iamsani.onrender.com', 'localhost', '127.0.0.1']
-
+ALLOWED_HOSTS = [
+    'sani-yadav-portfolio.onrender.com',
+    'www.sani-yadav-portfolio.onrender.com',
+    'localhost',
+    '127.0.0.1'
+]
 
 # Application definition
 
