@@ -1,0 +1,124 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Search Menu</title>
+    <link rel="stylesheet" href="{% static 'css/job.css' %}">
+</head>
+
+<body>
+
+    <!-- Search Input -->
+    <input type="text" id="searchInput" placeholder="Search for jobs..." onkeyup="searchJobs()">    <!-- Navigation Button -->
+    <div class="home-btn">
+        <button onclick="window.location.href='{% url 'home' %}';">Home</button>
+    </div>
+    <!-- Job Category Filter -->
+    <div>
+        <select id="categoryFilter" onchange="filterCategory()">
+            <option value="all">All Categories</option>
+            <option value="csc">CSC Services</option>
+            <option value="csc">Gramin works</option>
+
+            <option value="technical">Technical Jobs</option>
+        </select>
+    </div>
+
+    <!-- Job List -->
+    <ul class="job-list" id="jobList">
+        <!-- CSC Services -->
+        <li data-category="csc" data-title="Aadhaar Enrollment Operator">Aadhaar Enrollment Operator</li>
+        <li data-category="csc" data-title="CSC Operator">CSC Operator</li>
+        <li data-category="csc" data-title="Data Entry Operator">Data Entry Operator</li>
+        <li data-category="csc" data-title="Document Verification Officer">Document Verification Officer</li>
+        <li data-category="csc" data-title="Employment Registration Assistant">Employment Registration Assistant</li>
+        <!-- More job entries... -->
+
+        <!-- Technical Jobs -->
+        <li data-category="technical" data-title="Backend Developer">Backend Developer</li>
+        <li data-category="technical" data-title="DevOps Engineer">DevOps Engineer</li>
+        <li data-category="technical" data-title="Frontend Developer">Frontend Developer</li>
+        <li data-category="technical" data-title="Full Stack Developer">Full Stack Developer</li>
+        <li data-category="technical" data-title="Graphic Designer">Graphic Designer</li>
+        <!-- More technical job entries... -->
+        <!-- कृषि संबंधित कार्य -->
+        <li data-category="agriculture" data-title="खेती-बाड़ी">खेती-बाड़ी</li>
+        <li data-category="agriculture" data-title="डेयरी फार्मिंग">डेयरी फार्मिंग</li>
+        <li data-category="agriculture" data-title="मुर्गी पालन">मुर्गी पालन</li>
+        <li data-category="agriculture" data-title="मछली पालन">मछली पालन</li>
+        <li data-category="agriculture" data-title="जैविक खेती">जैविक खेती</li>
+        <li data-category="agriculture" data-title="मधुमक्खी पालन">मधुमक्खी पालन</li>
+
+        <!-- ग्रामीण व्यापार और स्वरोजगार -->
+    <li data-category="business" data-title="ग्रामोद्योग (हस्तशिल्प, कुम्हारी)">ग्रामोद्योग (हस्तशिल्प, कुम्हारी)</li>
+    <li data-category="business" data-title="सहकारी समिति संचालन">सहकारी समिति संचालन</li>
+    <li data-category="business" data-title="गल्ला और किराना दुकान">गल्ला और किराना दुकान</li>
+    <li data-category="business" data-title="कपड़े और रेडीमेड दुकान">कपड़े और रेडीमेड दुकान</li>
+    <li data-category="business" data-title="बढ़ई (Carpenter) का काम">बढ़ई (Carpenter) का काम</li>
+    <li data-category="business" data-title="लोहारगिरी (Blacksmith) का काम">लोहारगिरी (Blacksmith) का काम</li>
+
+      <!-- अन्य डिलीवरी सेवाएं -->
+      <li data-category="delivery" data-title="फूल, पूजा सामग्री और मिठाई डिलीवरी">फूल, पूजा सामग्री और मिठाई डिलीवरी</li>
+      <li data-category="delivery" data-title="कृषि उत्पाद (बीज, खाद) डिलीवरी">कृषि उत्पाद (बीज, खाद) डिलीवरी</li>
+      <li data-category="delivery" data-title="कस्टम गिफ्ट और हस्तशिल्प डिलीवरी">कस्टम गिफ्ट और हस्तशिल्प डिलीवरी</li>
+  
+        <!-- हेल्थ और फार्मेसी डिलीवरी -->
+    <li data-category="delivery" data-title="मेडिसिन और फार्मेसी डिलीवरी">मेडिसिन और फार्मेसी डिलीवरी</li>
+    <li data-category="delivery" data-title="आयुर्वेदिक और हर्बल उत्पाद डिलीवरी">आयुर्वेदिक और हर्बल उत्पाद डिलीवरी</li>
+
+       <!-- फोटोग्राफी और वीडियोग्राफी -->
+       <li data-category="media" data-title="Photographer & Videographer">
+        <strong>Photographer & Videographer:</strong> जन्मदिन, कार्यक्रम और अन्य इवेंट्स के लिए फोटोग्राफी और वीडियोग्राफी।
+    </li>
+    <li data-category="media" data-title="Wedding Photographer">
+        <strong>Wedding Photographer:</strong> शादियों के कार्यक्रमों की फोटोग्राफी और वीडियोग्राफी।
+    </li>
+    <li data-category="media" data-title="Wildlife Photographer">
+        <strong>Wildlife Photographer:</strong> जंगली जानवरों और प्रकृति की फोटोग्राफी।
+    </li>
+    <li data-category="media" data-title="Video Content Creator (YouTube, Instagram)">
+        <strong>Video Content Creator:</strong> YouTube, Instagram और अन्य सोशल मीडिया प्लेटफॉर्म्स के लिए वीडियो बनाना।
+    </li>
+
+    </ul>
+
+
+
+
+
+    <!-- Job Application Form -->
+    <div class="overlay" id="overlay"></div>
+    <div class="form-container" id="jobForm">
+        <h3 id="formTitle">Apply for Job</h3>
+
+        <!-- Personal Information Section -->
+        <div class="form">
+            <form id="applicationForm">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" placeholder="Your Name" required>
+
+                <label for="email">Your Email</label>
+                <input type="email" id="email" placeholder="Your Email" required>
+
+                <label for="phone">Your Phone Number</label>
+                <input type="text" id="phone" placeholder="Your Phone Number" pattern="[0-9]{10}" required>
+
+                <label for="dob">Date of Birth</label>
+                <input type="date" id="dob" required>
+
+                <label for="address">Address</label>
+                <textarea id="address" placeholder="Your Address" required></textarea>
+
+                <div class="button-container">
+                    <button type="button" id="submitBtn" onclick="submitForm()">Submit</button>
+                </div>
+            </form>        </div>
+    </div>
+    
+    <script src="{% static 'js/job.js' %}"></script>
+</body>
+
+</html>

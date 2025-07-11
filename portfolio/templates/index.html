@@ -1,0 +1,959 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Meta Information -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sani Yadav - Portfolio</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+  <link rel="icon" href="{% static 'img/favicon.png' %}">
+  <link rel="apple-touch-icon" href="{% static 'img/apple-touch-icon.png' %}">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome & Bootstrap CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+
+  <!-- Vendor CSS Files -->
+  <link rel="stylesheet" href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}">
+  <link rel="stylesheet" href="{% static 'vendor/bootstrap-icons/bootstrap-icons.css' %}">
+  <link rel="stylesheet" href="{% static 'vendor/aos/aos.css' %}">
+  <link rel="stylesheet" href="{% static 'vendor/glightbox/css/glightbox.min.css' %}">
+  <link rel="stylesheet" href="{% static 'vendor/swiper/swiper-bundle.min.css' %}">
+
+  <!-- Main CSS File -->
+  <link rel="stylesheet" href="{% static 'css/main.css' %}">
+</head>
+
+<body class="index-page">
+  <!-- Header Section -->
+  <header id="header" class="header dark-background d-flex flex-column">
+    <!-- Mobile Menu Toggle -->
+    <i class="header-toggle d-xl-none bi bi-list"></i>
+
+    <!-- Profile Image -->
+    <div class="profile-img">
+      <img src="{% static 'img/sani2.0.jpg' %}" alt="" class="img-fluid rounded-circle">
+    </div>
+
+    <!-- Logo -->
+    <a href="{% url 'home' %}" class="logo d-flex align-items-center justify-content-center">
+      <h1 class="sitename">Sani Yadav</h1>
+    </a>
+
+    <!-- Social Links -->
+    <div class="social-links text-center">
+      <a href="https://x.com/imsaniydv2?s=09" class="twitter"><i class="bi bi-twitter-x"></i></a>
+      <a href="https://www.freelancer.com/u/imsaniydv" class="freelancer-link"><i class="bi bi-briefcase"></i></a>
+      <a href="https://www.instagram.com/imsani2.0?igsh=OGQ5ZDc2ODk2ZA==" class="instagram"><i class="bi bi-instagram"></i></a>
+      <a href="https://github.com/Sani-Yadav?tab=repositories" class="freelancer-link"><i class="bi bi-github"></i></a>
+      <a href="https://www.linkedin.com/in/sani-yadav-986778292?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="linkedin" target="_blank" rel="noopener noreferrer"><i class="bi bi-linkedin"></i></a>
+    </div>
+
+    <!-- Navigation Menu -->
+    <nav id="navmenu" class="navmenu">
+      <ul>
+        <li><a href="#hero" class="active"><i class="bi bi-house navicon"></i>Home</a></li>
+        <li><a href="#about"><i class="bi bi-person navicon"></i> About</a></li>
+        <li><a href="#resume"><i class="bi bi-file-earmark-text navicon"></i> Resume</a></li>
+        <li><a href="#portfolio"><i class="bi bi-images navicon"></i> Portfolio</a></li>
+        <li><a href="#services"><i class="bi bi-hdd-stack navicon"></i> Services</a></li>
+        <li><a href="job.html"><i class="fa-solid fa-building-columns"></i>Jobs</a></li>
+        <li class="dropdown"><a href="#"><i class="bi bi-menu-button navicon"></i> <span>My Projects</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+          <ul>
+            <li><a href="quicksupport.html">Quicksupport</a></li>
+            <li class="dropdown"><a href="#"><span>New Projects</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+              <ul>
+                <li><a href="https://kltech.netlify.app/">KLTech it solutions Project</a></li>
+                <li><a href="https://skyapnahostel.netlify.app/contact?">apnahostelProject</a></li>
+                <li><a href="https://tirnetracctv.netlify.app/">tirnetracctvProject</a></li>
+                <li><a href="https://yadavdairy.netlify.app/">yadavdairyProject</a></li>
+                <li><a href="https://nyayapath.netlify.app/">nyayapath Project</a></li>
+                <li><a href="https://dolistp.netlify.app/">Todo-list-project</a></li>
+              </ul>
+            </li>
+            <li><a href="https://skbites.netlify.app/">skbites.netlify.app</a></li>
+            <li><a href="https://prorentcar.netlify.app/">prorentcar.netlify.app</a></li>
+            <li><a href="https://klyadav.netlify.app/">klyadav.netlify.app</a></li>
+            <li><a href="https://lernsky.netlify.app/">lernsky.netlify.app</a></li>
+            <li><a href="https://saniyadav.netlify.app/">saniyadav.netlify.app</a></li>
+          </ul>
+        </li>
+        <li><a href="#contact"><i class="bi bi-envelope navicon"></i> Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main class="main">
+    <!-- Hero Section -->
+    <section id="hero" class="hero section dark-background">
+      <img src="{% static 'img/img1.jpg' %}" alt="" data-aos="fade-in" class="">
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <h2>Sani Yadav</h2>
+        <p>I'm <span class="typed" data-typed-items="Full Stack Python Developer, Freelancer">Designer</span><span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span><span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span></p>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about section">
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>About</h2>
+        <p>I am a Full-Stack Python Developer with 6 months of experience in HTML, CSS, Bootstrap, JavaScript, jQuery, Python, Django, MySQL, and Git. I’ve developed 35+ scalable web applications with smooth API integration. I previously interned at Softflew Software Services, Lucknow, and am currently interning as a Full-Stack Developer. Passionate about problem-solving, I aspire to work at top tech companies like Google or Microsoft.</p>
+      </div><!-- End Section Title -->
+
+      <!-- About Content -->
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row gy-4 justify-content-center">
+          <div class="col-lg-4">
+            <img src="{% static 'img/sani00.jpg' %}" class="img-fluid" alt="">
+          </div>
+          <div class="col-lg-8 content">
+            <h2>Full Stack Python Developer.</h2>
+            <p class="fst-italic py-3">
+              Full Stack Python Developer with hands-on experience in HTML, CSS, JavaScript, jQuery, Bootstrap, Python, Django, SQL, and Git. Built 35+ dynamic and user-friendly web applications focused on clean, scalable code. Passionate about solving real-world problems through efficient digital solutions and constantly upgrading skills to deliver high-impact, modern web experiences.
+            </p>
+            <div class="row">
+              <div class="col-lg-6">
+                <ul>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Birthday:</strong> <span>10 November 2002</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Website:</strong> <span>iamsani.netlify.app</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Phone:</strong> <span>+7755027538</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>City:</strong> <span>Uttar Pardesh, India</span></li>
+                </ul>
+              </div>
+              <div class="col-lg-6">
+                <ul>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Age:</strong> <span>22 Years</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Degree:</strong> <span>Bca</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong> <span>sani228142@gmail.com</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Freelance:</strong> <span>Available</span></li>
+                </ul>
+              </div>
+            </div>
+            <p class="py-3">
+              As a Full Stack Python Developer, I have hands-on experience in HTML, CSS, JavaScript, jQuery, Bootstrap, Python, Django, SQL, and Git. I have developed 35+ dynamic web applications with a focus on clean, efficient, and scalable code. My passion lies in solving complex problems and building innovative digital solutions that enhance user experience. I am constantly learning and adapting to new technologies to deliver impactful and high-quality web solutions.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section><!-- /About Section -->
+
+    <!-- Stats Section -->
+    <section id="stats" class="stats section">
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row gy-4">
+          <div class="col-lg-3 col-md-6">
+            <div class="stats-item">
+              <i class="bi bi-emoji-smile"></i>
+              <span data-purecounter-start="0" data-purecounter-end="10" data-purecounter-duration="1"
+                class="purecounter"></span>
+              <p><strong>Happy Clients</strong> <span>Happy Clients who fully trust our highly innovative
+                  solutions.</span></p>
+            </div>
+          </div><!-- End Stats Item -->
+
+          <div class="col-lg-3 col-md-6">
+            <div class="stats-item">
+              <i class="bi bi-journal-richtext"></i>
+              <span data-purecounter-start="0" data-purecounter-end="35" data-purecounter-duration="1"
+                class="purecounter"></span>
+              <p><strong>Projects</strong> <span> Projects successfully delivered with exceptional excellence.</span>
+              </p>
+            </div>
+          </div><!-- End Stats Item -->
+
+          <div class="col-lg-3 col-md-6">
+            <div class="stats-item">
+              <i class="bi bi-headset"></i>
+              <span data-purecounter-start="0" data-purecounter-end="24" data-purecounter-duration="1"
+                class="purecounter"></span>
+              <p><strong>Hours_Support</strong> <span> Dedicated support ensuring seamless solutions.</span></p>
+            </div>
+          </div><!-- End Stats Item -->
+
+          <div class="col-lg-3 col-md-6">
+            <div class="stats-item">
+              <i class="bi bi-people"></i>
+              <span data-purecounter-start="0" data-purecounter-end="10" data-purecounter-duration="1"
+                class="purecounter"></span>
+              <p><strong>Hard Workers</strong> <span>A team of 10 hardworking individuals committed to success .
+                  </span></p>
+            </div>
+          </div><!-- End Stats Item -->
+        </div>
+      </div>
+    </section><!-- /Stats Section -->
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills section light-background">
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Skills</h2>
+        <p>HTML, CSS, Bootstrap, JavaScript, jQuery, Python, Django, MySQL, Git, GitHub, VS Code
+        </p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row skills-content skills-animation">
+          <div class="col-lg-6">
+            <div class="progress">
+              <span class="skill"><span>HTML</span> <i class="val">100%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+                </div>
+              </div>
+            </div><!-- End Skills Item -->
+
+            <div class="progress">
+              <span class="skill"><span>CSS</span> <i class="val">90%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
+                </div>
+              </div>
+            </div><!-- End Skills Item -->
+
+            <div class="progress">
+              <span class="skill"><span>JavaScript/JQuerie</span> <i class="val">75%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                </div>
+              </div>
+            </div><!-- End Skills Item -->
+          </div>
+
+          <div class="col-lg-6">
+            <div class="progress">
+              <span class="skill"><span>Python</span> <i class="val">80%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
+                </div>
+              </div>
+            </div><!-- End Skills Item -->
+
+            <div class="progress">
+              <span class="skill"><span>Django</span> <i class="val">90%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
+                </div>
+              </div>
+            </div><!-- End Skills Item -->
+
+            <div class="progress">
+              <span class="skill"><span>SQL Databases:</span> <i class="val">55%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100">
+                </div>
+              </div>
+            </div><!-- End Skills Item -->
+          </div>
+        </div>
+      </div>
+    </section><!-- /Skills Section -->
+
+    <!-- New Skills Section -->
+    <section id="skills" class="skills section light-background">
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Skills</h2>
+        <p>Git/GitHub, Linux Commands, Debugging, MongoDB, Bootstrap, Media Queries.</p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row skills-content skills-animation">
+          <div class="col-lg-6">
+            <div class="progress">
+              <span class="skill"><span>Git/GitHub</span> <i class="val">700%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+                </div>
+              </div>
+            </div><!-- End Skills Item -->
+
+            <div class="progress">
+              <span class="skill"><span>Linux Commands</span> <i class="val">90%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
+                </div>
+              </div>
+            </div><!-- End Skills Item -->
+
+            <div class="progress">
+              <span class="skill"><span>Debugging</span> <i class="val">75%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                </div>
+              </div>
+            </div><!-- End Skills Item -->
+          </div>
+
+          <div class="col-lg-6">
+            <div class="progress">
+              <span class="skill"><span>MongoDB</span> <i class="val">80%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
+                </div>
+              </div>
+            </div><!-- End Skills Item -->
+
+            <div class="progress">
+              <span class="skill"><span>Bootstrap</span> <i class="val">90%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
+                </div>
+              </div>
+            </div><!-- End Skills Item -->
+
+            <div class="progress">
+              <span class="skill"><span>Media Queries</span> <i class="val">55%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100">
+                </div>
+              </div>
+            </div><!-- End Skills Item -->
+          </div>
+        </div>
+      </div>
+    </section><!-- /Skills Section -->
+
+    <!-- Resume Section -->
+    <section id="resume" class="resume section">
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Resume</h2>
+        <button class="btn btn-primary" onclick="window.location.href='{% static 'img/resume.jpg.pdf' %}'">
+          <i class="fa-solid fa-file-pdf"></i>
+        </button>
+        <br>
+        <p>I am a highly motivated and results-driven Full-Stack Developer with expertise in HTML, CSS, JavaScript,
+          Python, Django, SQL, and GitHub. With hands-on experience in developing 30+ projects, I specialize in building
+          scalable, user-friendly web applications. My strong problem-solving skills, ability to write clean and
+          efficient code, and passion for creating seamless user experiences set me apart. I am committed to continuous
+          learning and staying up-to-date with emerging technologies. Currently, I am seeking exciting opportunities to
+          leverage my skills and contribute to innovative projects in the tech industry.</p>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+            <h3 class="resume-title">Summary</h3>
+            <div class="resume-item pb-0">
+              {% for item in smry %}
+              <h4>{{ item.name}}</h4>
+              <p><em>{{ item.summary}}</em></p>
+              <ul>
+                <li>{{item.college}}</li>
+                <li>{{item.phone}}</li>
+                <li>{{item.email}}</li>
+              </ul>
+              {% endfor%}
+            </div><!-- End Resume Item -->
+
+            <h3 class="resume-title">Education</h3>
+            {% for item in education %}
+            <div class="resume-item">
+              <h4>{{item.title}}<br>
+              
+                <h5>2022 - 2024</h5>
+                <ul>
+                  <li>{{item.text_area}}</li>
+                  <li>Presented in two seminars on web development and database design.</li>
+                  <li>Delivered speeches and participated in student competitions for essay writing and technical
+                    presentations.</li>
+                  <li>Organized and participated in the Fresher's Party as part of the event management team.</li>
+                </ul>
+            </div><!-- End Resume Item -->
+            {% endfor %}
+            <div class="resume-item">
+              
+              <h3 class="resume-title">Internship</h3>
+              <h4>Full-Stack Developer Intern (Python)</h4>
+               <span>Skyview Smart Solutions – Best IT Company (Lucknow)</span>
+               <h5>2024 - Present</h5>
+               <br>
+                <ul>
+                  <li>Hands-on training in HTML, CSS, and Bootstrap for front-end development.</li>
+                  <li>Worked on practical projects including e-commerce websites, portfolio designs, and blog platforms.</li>
+                  <li>Strengthened skills in full-stack development using Python and Django, with an emphasis on clean code and scalability.</li>
+                </ul>
+            </div>
+
+
+
+            <div class="resume-item">
+              <h4>Senior Secondary (12th)</h4>
+              <br>
+              <h4>P.R.I.C. Semari Bazar, Sultanpur, UP Board</h4>
+              <span>2020</span>
+              <ul>
+                <li>Secured First Division.</li>
+                <li>Studied core subjects: Physics, Chemistry, and Mathematics.</li>
+              </ul>
+            </div>
+
+            <div class="resume-item">
+              <h4>Secondary (10th)</h4>
+              <br>
+              <h4>S.K. Girls IC, Pemapur, Sultanpur, UP Board</h4>
+              <span>2018</span>
+              <li>Studied core subjects: Mathematics, Science, and English.</li>
+              <ul></ul>
+            </div>
+          </div>
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+            <h3 class="resume-title">Experience</h3>
+            <div class="resume-item">
+              <h4>Full-Stack Developer Intern</h4>
+              <h5>2024 - Present</h5>
+              <p><em>[Skyview Smart Solutions- Best IT Company] | <div Lucknow Uttar Pardesh Of India></div>
+                  Duration: [Start 23 September/2024] – Present </em></p>
+              <ul>
+                <li>Collaborating with the development team to create scalable and responsive web applications.</li>
+                <li>Developing scalable and efficient full-stack applications using Python, Django, HTML, CSS,
+                  JavaScript, and modern frameworks.</li>
+                <li>Managing back-end operations with Python and Django, ensuring data integrity and security with
+                  MySQL.</li>
+                <li>Integrated third-party APIs to enhance functionality and resolved critical application issues
+                  through debugging.</li>
+                <li>Worked on 30+ projects, including e-commerce websites, portfolio sites, blog platforms, and business
+                  applications.</li>
+              </ul>
+            </div><!-- End Resume Item -->
+
+            <div class="resume-item">
+              <h4>Freelance Full-Stack Developer and IT Specialist</h4>
+              <h5>2023 - 2024</h5>
+              <p><em>2023 - 2024 | Self-Driven Projects | Remote</em></p>
+              <ul>
+                <li>Completed a variety of web development projects for clients, including designing, coding, and
+                  deploying websites.s).</li>
+                <li>Specialized in responsive design, API integration, and performance optimization.</li>
+                <li>Provided solutions using Tally with GST, MS Office (Word, Excel, PowerPoint, Outlook), and AI tools
+                  like ChatGPT, Gemini, and DeepSeek to improve productivity.</li>
+                <li>Created impactful visual designs using Adobe Photoshop and handled video editing projects with
+                  Filmora.</li>
+              </ul>
+
+              <h4>Key Skills and Tools</h4>
+              <ul>
+                <li>Computer Fundamentals: Proficient in operating systems, typing (Hindi/English), and internet basics
+                  (browsing, email).</li>
+                <li>Artificial Intelligence Tools: Proficient in using AI-powered tools like ChatGPT, Gemini, Grok,
+                  DeepSeek, DALL·E, and modern AI technologies.<i></li>
+                <li>Software Tools: MS Word, Excel (basic and advanced), PowerPoint, Outlook, Tally GST, Adobe
+                  Photoshop, Filmora.</li>
+                <li>Web Development: Full-stack development using HTML, CSS, Bootstrap, JavaScript, jQuery, Python,
+                  Django, MySQL, Git, GitHub, Netlify, and other modern web technologies.</li>
+                <li>IT and Networking: Proficient in Networking Basics (CCNA) and Cyber Security Fundamentals.</li>
+                <li>Video Editing and Design: Skilled in Filmora, Adobe Photoshop, and Canva.</li>
+                <li> I am passionate about technology and always eager to learn new things in IT and AI. </li>
+              </ul>
+            </div><!-- End Resume Item -->
+          </div><!-- End Resume Item -->
+        </div>
+      </div>
+    </section><!-- /Resume Section -->
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio section light-background">
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Portfolio</h2>
+        <p>Welcome! I am a Full-Stack Developer with expertise in HTML, CSS, Bootstrap, JavaScript, jQuery, Python
+          (Django), MySQL, Git, GitHub, and Netlify. With 30+ projects completed, including e-commerce platforms and
+          portfolio websites, I specialize in building dynamic, responsive, and user-centric web applications.
+          Passionate about problem-solving and innovation, I continuously refine my skills to deliver efficient digital
+          solutions.</p>
+      </div>
+
+      <section id="portfolio" class="portfolio">
+        <div class="container">
+          <div class="section-title">
+            <h2>Explore My Work</h2>
+            <p></p>
+          </div><!-- End Section Title -->
+
+          <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
+            <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
+              <li data-filter="*" class="filter-active">All</li>
+              <li data-filter=".filter-app">E-commerce Website</li>
+              <li data-filter=".filter-branding">Personal Projects</li>
+              <li data-filter=".filter-books">Project</li>
+              <li data-filter=".filter-product">Services</li>
+            </ul>
+            <!-- End Portfolio Filters -->
+
+            <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
+              <!-- Portfolio Item 1 -->
+              <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+                <div class="portfolio-content h-100">
+                  <img src="{% static 'img/01new.jpg' %}" class="img-fluid" alt="">
+                  <div class="portfolio-info">
+                    <h4>project 1</h4>
+                    <p>Shree Krishna Reshto – Delicious Food & Party Table Booking Available!</p>
+                    <a href="assets/img/portfolio/app-1.jpg" title="App 1" data-gallery="portfolio-gallery-app"
+                      class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                    <a href="{% url 'portfolio_details' %}" title="More Details" class="details-link"><i
+                        class="bi bi-link-45deg"></i></a>
+                  </div>
+                </div>
+              </div>
+              <!-- End Portfolio Item 1 -->
+
+              <!-- Portfolio Item 2 -->
+              <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
+                <div class="portfolio-content h-100">
+                  <img src="{% static 'img/image.png' %}" class="img-fluid" alt="">
+                  <div class="portfolio-info">
+                    <h4>project 2</h4>
+                    <p>Amazon Clone – Online Shopping with Easy Checkout & Secure Payments.</p>
+                    <a href="assets/img/portfolio/product-1.jpg" title="Product 1"
+                      data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i
+                        class="bi bi-zoom-in"></i></a>
+                    <a href="project2.html" title="More Details" class="details-link"><i
+                        class="bi bi-link-45deg"></i></a>
+                  </div>
+                </div>
+              </div>
+              <!-- End Portfolio Item 2 -->
+
+              <!-- Portfolio Item 3 -->
+              <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
+                <div class="portfolio-content h-100">
+                  <img src="{% static 'img/03new.jpg' %}" class="img-fluid" alt="portfolio personal project 3">
+                  <div class="portfolio-info">
+                    <h4>Project 3</h4>
+                    <p>Find & Hire Best Lawyers Easily – Advocate Selection Made Simple! ⚖️</p>
+                    <a href="assets/img/portfolio/branding-1.jpg" title="Branding 1"
+                      data-gallery="portfolio-gallery-branding" class="glightbox preview-link">
+                      <i class="bi bi-zoom-in"></i>
+                    </a>
+                    <a href="project4.html" title="More Details" class="details-link">
+                      <i class="bi bi-link-45deg"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <!-- End Portfolio Item 3 -->
+
+              <!-- Portfolio Item 4 (Books) -->
+              <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-books">
+                <div class="portfolio-content h-100">
+                  <img src="{% static 'img/04new.jpg' %}" class="img-fluid" alt="Hostel Finder Project">
+                  <div class="portfolio-info">
+                    <h4>Project 4</h4>
+                    <p>Find the Best UG/PG Hostels for Boys & Girls Easily! <span>🏠</span></p>
+                    <a href="assets/img/portfolio/books-1.jpg" title="Books 1" data-gallery="portfolio-gallery-books"
+                      class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                    <a href="{% url 'project04' %}" title="More Details" class="details-link">
+                      <i class="bi bi-link-45deg"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <!-- End Portfolio Item 4 -->
+
+              <!-- Portfolio Item 5 -->
+              <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
+                <div class="portfolio-content h-100">
+                  <img src="{% static 'img/balaji01.jpg' %}" class="img-fluid" alt="Balaji Fortune - Luxury Homes">
+                  <div class="portfolio-info">
+                    <h4>Project 5</h4>
+                    <p>Balaji Fortune – Premium Living with Luxury & Comfort Homes!</p>
+                    <a href="{% static 'img/hotel.jpg' %}" title="Product 2" data-gallery="portfolio-gallery-product"
+                      class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                    <a href="{% url 'project06' %}" title="More Details" class="details-link">
+                      <i class="bi bi-link-45deg"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <!-- End Portfolio Item 5 -->
+
+
+
+              <!-- Portfolio Item 6 (Personal Projects) -->
+              <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
+                <div class="portfolio-content h-100">
+                  <img src="{% static 'img/new5.jpg' %}" class="img-fluid" alt="hotelmanagement">
+                  <div class="portfolio-info">
+                    <h4>project 6</h4>
+                    <p>Nertera CCTV – Smart Security Solutions for Homes & Businesses!" 📷🔒</p>
+                    <a href="assets/img/portfolio/personal-1.jpg" title="Personal Project 1"
+                      data-gallery="portfolio-gallery-personal" class="glightbox preview-link"><i
+                        class="bi bi-zoom-in"></i></a>
+                    <a href="{% url 'portfolio_details' %}" title="More Details" class="details-link"><i
+                        class="bi bi-link-45deg"></i></a>
+                  </div>
+                </div>
+              </div>
+              <!-- End Portfolio Item 6 -->
+            </div><!-- End Portfolio Container -->
+          </div>
+        </div>
+      </section>
+
+      <!-- Services Section -->
+      <section id="services" class="services section">
+        <!-- Section Title -->
+        <div class="container section-title" data-aos="fade-up">
+          <h2>Services</h2>
+          <p>I offer professional web and software development services tailored to modern business needs. Specializing
+            in full-stack development, I build responsive websites, powerful APIs, and scalable solutions. My focus is
+            on delivering high-quality, innovative, and user-friendly applications that drive business growth and
+            success.</p>
+        </div><!-- End Section Title -->
+
+        <div class="container">
+          <div class="row gy-4">
+            <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="100">
+              <div class="icon flex-shrink-0"><i class="bi bi-briefcase"></i></div>
+              <div>
+                <h4 class="title"><a href="service-details.html" class="stretched-link">Responsive Web Design </a></h4>
+                <p class="description">Responsive Web Design ensures websites adapt to any device, delivering a seamless
+                  user experience and optimal performance.</p>
+              </div>
+            </div><!-- End Service Item -->
+
+            <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="200">
+              <div class="icon flex-shrink-0"><i class="bi bi-card-checklist"></i></div>
+              <div>
+                <h4 class="title"><a href="service-details.html" class="stretched-link">Custom Web Development</a></h4>
+                <p class="description">Building fully responsive and dynamic websites tailored to client requirements
+                  using modern frameworks and tools.</p>
+              </div>
+            </div><!-- End Service Item -->
+
+            <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="300">
+              <div class="icon flex-shrink-0"><i class="bi bi-bar-chart"></i></div>
+              <div>
+                <h4 class="title"><a href="service-details.html" class="stretched-link">API Development &
+                    Integration</a></h4>
+                <p class="description">Creating and integrating RESTful APIs or GraphQL APIs for seamless data exchange
+                  and enhanced functionality.</p>
+              </div>
+            </div><!-- End Service Item -->
+
+            <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="400">
+              <div class="icon flex-shrink-0"><i class="bi bi-binoculars"></i></div>
+              <div>
+                <h4 class="title"><a href="service-details.html" class="stretched-link">Database Design & Management</a>
+                </h4>
+                <p class="description">Designing, implementing, and optimizing databases using MySQL, PostgreSQL, or
+                  MongoDB for secure and scalable data handling.</p>
+              </div>
+            </div><!-- End Service Item -->
+
+            <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="500">
+              <div class="icon flex-shrink-0"><i class="bi bi-brightness-high"></i></div>
+              <div>
+                <h4 class="title"><a href="service-details.html" class="stretched-link">E-commerce Development</a></h4>
+                <p class="description"> Developing robust e-commerce platforms with shopping carts, secure payment
+                  gateways, and user-friendly interfaces. </p>
+              </div>
+            </div>
+
+            <!-- End Service Item -->
+
+            <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="600">
+              <div class="icon flex-shrink-0"><i class="bi bi-calendar4-week"></i></div>
+              <div>
+                <h4 class="title"><a href="service-details.html" class="stretched-link">Website Maintenance &
+                    Support</a></h4>
+                <p class="description"> Providing ongoing support, performance optimization, and bug fixes to ensure
+                  applications run smoothly. </p>
+              </div>
+            </div><!-- End Service Item -->
+          </div>
+        </div>
+      </section>
+
+      <!-- /Services Section -->
+
+      <!-- Testimonials Section -->
+      <section id="testimonials" class="testimonials section light-background">
+        <!-- Section Title -->
+        <div class="container section-title" data-aos="fade-up">
+          <h2>Testimonials</h2>
+          <p>Sani Yadav is highly praised for delivering innovative solutions and exceptional development expertise.</p>
+        </div><!-- End Section Title -->
+
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+          <div class="swiper init-swiper">
+            <script type="application/json" class="swiper-config">
+              {
+                "loop": true,
+                "speed": 600,
+                "autoplay": {
+                  "delay": 5000
+                },
+                "slidesPerView": "auto",
+                "pagination": {
+                  "el": ".swiper-pagination",
+                  "type": "bullets",
+                  "clickable": true
+                },
+                "breakpoints": {
+                  "320": {
+                    "slidesPerView": 1,
+                    "spaceBetween": 40
+                  },
+                  "1200": {
+                    "slidesPerView": 3,
+                    "spaceBetween": 1
+                  }
+                }
+              }
+            </script>
+
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="testimonial-item">
+                  <p>
+                    <i class="bi bi-quote quote-icon-left"></i>
+                    <span>I lead [KL Yadav Infotech], bringing innovative ideas, empowering teams, developing strategic
+                      plans, and consistently working towards achieving excellence in the technology sector to drive
+                      growth.</span>
+                    <i class="bi bi-quote quote-icon-right"></i>
+                  </p>
+                  <img src="{% static 'img/sani2.jpg' %}" class="testimonial-img" alt="">
+                  <h3>Sani Yadav</h3>
+                  <h4>Ceo &amp; Founder</h4>
+                </div>
+              </div><!-- End testimonial item -->
+
+              <div class="swiper-slide">
+                <div class="testimonial-item">
+                  <p>
+                    <i class="bi bi-quote quote-icon-left"></i>
+                    <span>As President & Designer, I lead with vision, manage teams, and drive creative strategies,
+                      ensuring the company's success through innovation, design excellence, and strategic
+                      decision-making to meet objectives.</span>
+                    <i class="bi bi-quote quote-icon-right"></i>
+                  </p>
+                  <img src="{% static 'img/vk.jpg' %}" class="testimonial-img" alt="Designer Vikas Pal">
+                  <h3>Er.Vikas Pal</h3>
+                  <h4> President & Designer</h4>
+                </div>
+              </div><!-- End testimonial item -->
+
+              <div class="swiper-slide">
+                <div class="testimonial-item">
+                  <p>
+                    <i class="bi bi-quote quote-icon-left"></i>
+                    <span>The CFO manages financial planning, risk, and reporting, ensuring stability, making strategic
+                      decisions, and guiding the company toward achieving its financial and long-term organizational
+                      goals.</span>
+                    <i class="bi bi-quote quote-icon-right"></i>
+                  </p>
+                  <img src="{% static 'img/klydv2.jpg' %}" class="testimonial-img" alt="Kanhaiya Lal Yadav">
+                  <h3>Kanhaiya Lal Yadav</h3>
+                  <h4>Chief Financial Officer (CFO)</h4>
+                </div>
+              </div><!-- End testimonial item -->
+
+              <div class="swiper-slide">
+                <div class="testimonial-item">
+                  <p>
+                    <i class="bi bi-quote quote-icon-left"></i>
+                    <span>The Board of Directors provides strategic oversight, making key decisions to guide the
+                      company, ensuring accountability, and aligning its operations with long-term organizational goals
+                      and vision.</span>
+                    <i class="bi bi-quote quote-icon-right"></i>
+                  </p>
+                  <img src="{% static 'img/azad2.jpg' %}" class="testimonial-img" alt="">
+                  <h3>Azad Yadav</h3>
+                  <h4>Board of Directors</h4>
+                </div>
+              </div><!-- End testimonial item -->
+
+              <div class="swiper-slide">
+                <div class="testimonial-item">
+                  <p>
+                    <i class="bi bi-quote quote-icon-left"></i>
+                    <span>The Chief Technology Officer (CTO) oversees technology strategy, innovation, and
+                      implementation, driving the company's tech vision and ensuring alignment with business goals for
+                      long-term success.</span>
+                    <i class="bi bi-quote quote-icon-right"></i>
+                  </p>
+                  <img src="{% static 'img/ayush.jpg' %}" class="testimonial-img" alt="">
+                  <h3>Ayush Shukla</h3>
+                  <h4>Chief Technology Officer (CTO)</h4>
+                </div>
+              </div><!-- End testimonial item -->
+            </div>
+
+
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </section><!-- /Testimonials Section -->
+
+      <!-- Contact Section -->
+      <section id="contact" class="contact section">
+        <!-- Section Title -->
+        <div class="container section-title" data-aos="fade-up">
+          <h2>Contact</h2>
+          <p>"Feel free to reach out for any project inquiries, collaboration opportunities, or just to connect. I'll
+            get back to you as soon as possible!"</p>
+        </div><!-- End Section Title -->
+
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+          <div class="row gy-4">
+            <div class="col-lg-5">
+              <div class="info-wrap">
+                <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="200">
+                  <i class="bi bi-geo-alt flex-shrink-0"></i>
+                  <div>
+                    <h3>Address</h3>
+                    <p> Lucknow, Uttar Pradesh, India 226026.</p>
+                  </div>
+                </div><!-- End Info Item -->
+
+                <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
+                  <i class="bi bi-telephone flex-shrink-0"></i>
+                  <div>
+                    <h3>Call Us</h3>
+                    <p>+ 77 55 02 75 38</p>
+                  </div>
+                </div><!-- End Info Item -->
+
+                <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
+                  <i class="bi bi-envelope flex-shrink-0"></i>
+                  <div>
+                    <h3>Email Us</h3>
+                    <p>info@example.com</p>
+                  </div>
+                </div><!-- End Info Item -->
+
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3559.845377888799!2d80.94615967510754!3d26.84669307671807!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399be2ae2c693c3f%3A0x57b7e64860d7b8f7!2sLucknow%2C%20Uttar%20Pradesh!5e0!3m2!1sen!2sin!4v1715670162493!5m2!1sen!2sin"
+                  frameborder="0" style="border:0; width: 100%; height: 270px;" allowfullscreen="" loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"></iframe>
+              </div>
+            </div>
+        <!--start contect form-->
+          
+<!--Contact Form Start -->
+<div class="col-lg-7">
+  <form id="contact-form" class="php-email-form" action="{% url 'contact' %}" method="post" data-aos="fade-up" data-aos-delay="200">
+    {% csrf_token %}
+    <div class="row gy-4">
+      <div class="col-md-6">
+        <label for="name-field" class="pb-2">Your Name</label>
+        <input type="text" name="user_name" id="name-field" class="form-control" required="">
+      </div>
+
+      <div class="col-md-6">
+        <label for="email-field" class="pb-2">Your Email</label>
+        <input type="email" class="form-control" name="user_email" id="email-field" required="">
+      </div>
+      
+      
+
+
+      <div class="col-md-12">
+  <label for="phone-field" class="pb-2">Phone Number</label>
+  <input type="text" class="form-control" name="phone" id="phone-field" required="">
+</div>
+
+
+      <div class="col-md-12">
+        <label for="message-field" class="pb-2">Message</label>
+        <textarea class="form-control" name="message" rows="10" id="message-field" required=""></textarea>
+      </div>
+
+      <div class="col-md-12 text-center">
+        <div class="loading">Loading</div>
+        <div class="error-message"></div>
+        <div class="sent-message">Your message has been sent. Thank you!</div>
+
+        <button type="submit">Send Message</button>
+      </div>
+    </div>
+  </form>
+</div>
+
+ {% if messages %}
+    {% for message in messages %}
+      <div class="alert alert-success alert-dismissible fade show mt-3 mx-3" role="alert">
+        {{ message }}
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div>
+    {% endfor %}
+  {% endif %}
+
+  {% if messages %}
+  <script>
+    {% for message in messages %}
+      alert("{{ message|escapejs }}");
+    {% endfor %}
+  </script>
+{% endif %}
+
+
+
+
+      <!-- /Contact Section end -->
+
+  </main>
+
+  <!-- Footer Section -->
+  <footer id="footer" class="footer position-relative light-background" style="padding: 20px 0; text-align: center;">
+    <div class="container">
+      <div class="copyright">
+        <p style="margin-bottom: 5px;">© <span>2025 Sani Yadav |</span>
+          <strong class="px-1 sitename">Full-Stack Developer |</strong>
+          <span>All Rights Reserved</span>
+        </p>
+      </div>
+      <div class="credits">
+        <p class="mb-0">Designed and Developed by Sani Yadav</p>
+      </div>
+    </div>
+    <!-- Footer Social Media -->
+    <div class="social-media" style="margin-top: 10px;">
+      <div class="social-links">
+        <a href="https://x.com/imsaniydv2?s=09" class="twitter"><i class="bi bi-twitter-x"></i></a>
+        <a href="https://www.facebook.com/share/p/18c4Ew2dBt/" class="facebook" target="_blank" rel="noopener noreferrer"><i class="bi bi-facebook"></i></a>
+        <a href="https://www.instagram.com/imsani2.0?igsh=OGQ5ZDc2ODk2ZA==" class="instagram"><i class="bi bi-instagram"></i></a>
+        <a href="https://www.freelancer.com/u/imsaniydv" class="freelancer-link"><i class="bi bi-briefcase"></i></a>
+        <a href="https://www.linkedin.com/in/sani-yadav-986778292?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="linkedin" target="_blank" rel="noopener noreferrer"><i class="bi bi-linkedin"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'vendor/php-email-form/validate.js' %}"></script>
+  <script src="{% static 'vendor/aos/aos.js' %}"></script>
+  <script src="{% static 'vendor/typed.js/typed.umd.js' %}"></script>
+  <script src="{% static 'vendor/purecounter/purecounter_vanilla.js' %}"></script>
+  <script src="{% static 'vendor/waypoints/noframework.waypoints.js' %}"></script>
+  <script src="{% static 'vendor/glightbox/js/glightbox.min.js' %}"></script>
+  <script src="{% static 'vendor/imagesloaded/imagesloaded.pkgd.min.js' %}"></script>
+  <script src="{% static 'vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
+  <script src="{% static 'vendor/swiper/swiper-bundle.min.js' %}"></script>
+  <!-- Main JS File -->
+  <script src="{% static 'js/main.js' %}"></script>
+</body>
+
+</html>
