@@ -14,11 +14,10 @@ SECRET_KEY = os.environ.get('SECRET_KEY', 'django-insecure-6c*1^zk2s^h8ysg*fw^#q
 DEBUG = False
 
 ALLOWED_HOSTS = [
-    'sani-yadav-portfolio.onrender.com',
-    'sani-yadav-portfolio-7.onrender.com',
-    'iamsaniydv.pythonanywhere.com',
+    '.onrender.com',  # Allows all render.com subdomains
+    'localhost',
     '127.0.0.1',
-    'localhost'
+    '.pythonanywhere.com',
 ]
 
 # Application definition
