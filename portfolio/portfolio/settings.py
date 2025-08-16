@@ -15,6 +15,7 @@ DEBUG = False
 
 ALLOWED_HOSTS = [
     'sani-yadav-portfolio.onrender.com',
+    'sani-yadav-portfolio-7.onrender.com',
     'iamsaniydv.pythonanywhere.com',
     '127.0.0.1',
     'localhost'
