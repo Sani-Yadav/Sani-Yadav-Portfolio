@@ -1,2 +1,2 @@
 web: gunicorn portfolio.wsgi:application --log-file -
-release: python manage.py collectstatic --noinput
+release: python portfolio/manage.py collectstatic --noinput
