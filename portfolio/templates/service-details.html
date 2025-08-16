@@ -5,7 +5,7 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Service Details </title>
+  <title>Sani Yadav - Service Details</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -13,11 +13,11 @@
   <link href="{% static 'img/favicon.png' %}" rel="icon">
   <link href="{% static 'img/apple-touch-icon.png' %}" rel="apple-touch-icon">
 
-  <!-- Fonts -->
+  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Poppins:wght@300;400;500;600;700&family=Raleway:wght@300;400;500;600;700&display=swap"
     rel="stylesheet">
 
   <!-- Vendor CSS Files -->
@@ -29,21 +29,19 @@
 
   <!-- Main CSS File -->
   <link href="{% static 'css/main.css' %}" rel="stylesheet">
-
-  
 </head>
 
 <body class="service-details-page">
 
+  <!-- ======= Header ======= -->
   <header id="header" class="header dark-background d-flex flex-column">
     <i class="header-toggle d-xl-none bi bi-list"></i>
 
     <div class="profile-img">
-      <img src="{% static 'img/sani2.jpg' %}" alt="" class="img-fluid rounded-circle">
+      <img src="{% static 'img/sani2.jpg' %}" alt="Profile" class="img-fluid rounded-circle">
     </div>
 
     <a href="index.html" class="logo d-flex align-items-center justify-content-center">
-
       <h1 class="sitename">Sani Yadav</h1>
     </a>
 
@@ -55,6 +53,7 @@
       <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
     </div>
 
+    <!-- Navigation Menu -->
     <nav id="navmenu" class="navmenu">
       <ul>
         <li><a href="{% url 'home' %}">Home</a></li>
@@ -62,12 +61,12 @@
         <li><a href="#resume"><i class="bi bi-file-earmark-text navicon"></i> Resume</a></li>
         <li><a href="#portfolio"><i class="bi bi-images navicon"></i> Portfolio</a></li>
         <li><a href="#services"><i class="bi bi-hdd-stack navicon"></i> Services</a></li>
-        <li class="dropdown"><a href="#"><i class="bi bi-menu-button navicon"></i> <span>Dropdown</span> <i
-              class="bi bi-chevron-down toggle-dropdown"></i></a>
+        <li class="dropdown"><a href="#"><i class="bi bi-menu-button navicon"></i> <span>Dropdown</span>
+            <i class="bi bi-chevron-down toggle-dropdown"></i></a>
           <ul>
             <li><a href="#">Dropdown 1</a></li>
-            <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i
-                  class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <li class="dropdown"><a href="#"><span>Deep Dropdown</span>
+                <i class="bi bi-chevron-down toggle-dropdown"></i></a>
               <ul>
                 <li><a href="#">Deep Dropdown 1</a></li>
                 <li><a href="#">Deep Dropdown 2</a></li>
@@ -84,9 +83,10 @@
         <li><a href="#contact"><i class="bi bi-envelope navicon"></i> Contact</a></li>
       </ul>
     </nav>
-
   </header>
+  <!-- End Header -->
 
+  <!-- ======= Main ======= -->
   <main class="main">
 
     <!-- Page Title -->
@@ -100,83 +100,83 @@
           </ol>
         </nav>
       </div>
-    </div><!-- End Page Title -->
+    </div>
+    <!-- End Page Title -->
 
     <!-- Service Details Section -->
     <section id="service-details" class="service-details section">
-
       <div class="container">
-
         <div class="row gy-4">
 
           <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
             <div class="services-list">
-              <a href="#" class="active">Web Development </a>
+              <a href="#" class="active">Web Development</a>
               <a href="#">Backend Development</a>
               <a href="#">Frontend Development</a>
               <a href="#">Custom Software Solutions</a>
               <a href="#">Database Management</a>
-              <a href="#"> Version Control & Collaboration</a>
-
+              <a href="#">Version Control & Collaboration</a>
             </div>
 
             <h4>Delivering Excellence Through Innovation</h4>
-            <p> Dedicated to delivering top-notch solutions tailored to client needs. With a strong focus on innovation and quality, I aim to create impactful and user-friendly web applications that exceed expectations.</p>
+            <p>
+              Dedicated to delivering top-notch solutions tailored to client needs. With a strong focus on innovation and
+              quality, I aim to create impactful and user-friendly web applications that exceed expectations.
+            </p>
           </div>
 
           <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
-            <img src="{% static 'img/services.jpg' %}" alt="" class="img-fluid services-img" loading="lazy">
+            <img src="{% static 'img/services.jpg' %}" alt="Service" class="img-fluid services-img" loading="lazy">
             <h3>End-to-End Web and Software Development</h3>
             <p>
-              Specializing in designing and developing complete web and software solutions, from user-friendly frontends to robust backends, with seamless integration of databases, APIs, and advanced technologies for delivering scalable and efficient applications.
+              Specializing in designing and developing complete web and software solutions, from user-friendly frontends to
+              robust backends, with seamless integration of databases, APIs, and advanced technologies for delivering scalable
+              and efficient applications.
             </p>
             <ul>
-              <li><i class="bi bi-check-circle"></i> <span>Providing custom web and software development solutions tailored to your business needs.</span></li>
-              <li><i class="bi bi-check-circle"></i> <span>Expert in creating dynamic websites, robust backend systems, and user-friendly interfaces.</span>
-              </li>
-              <li><i class="bi bi-check-circle"></i> <span>Committed to delivering high-quality, scalable, and secure digital solutions for your growth.</span></li>
+              <li><i class="bi bi-check-circle"></i> Providing custom web and software development solutions tailored to
+                your business needs.</li>
+              <li><i class="bi bi-check-circle"></i> Expert in creating dynamic websites, robust backend systems, and
+                user-friendly interfaces.</li>
+              <li><i class="bi bi-check-circle"></i> Committed to delivering high-quality, scalable, and secure digital
+                solutions for your growth.</li>
+            </ul>
+            <p>
+              Delivering innovative solutions with precision and excellence. Empowering businesses through modern
+              technologies and ensuring unmatched quality in every project.
             </p>
             <p>
-              Delivering innovative solutions with precision and excellence. Empowering businesses through modern technologies and ensuring unmatched quality in every project.
-            </p>
-            <p>
-              Focused on delivering seamless and efficient solutions, we tackle complex challenges with expertise and innovation. Our team is dedicated to ensuring the highest standards of service, providing businesses with sustainable and scalable outcomes.
+              Focused on delivering seamless and efficient solutions, tackling complex challenges with expertise and
+              innovation. Dedicated to the highest standards of service, providing sustainable and scalable outcomes.
             </p>
           </div>
 
         </div>
-
       </div>
-
-    </section><!-- /Service Details Section -->
+    </section>
+    <!-- End Service Details Section -->
 
   </main>
+  <!-- End Main -->
 
+  <!-- ======= Footer ======= -->
   <footer id="footer" class="footer position-relative light-background">
-
-    <div class="container">
-      <div class="copyright text-center ">
-        <p>© <span>2025 Sani Yadav |</span> <strong class="px-1 sitename">Full-Stack Developer |</strong> <span>All
-            Rights Reserved</span>
+    <div class="container text-center">
+      <div class="copyright">
+        <p>© <span>2025 Sani Yadav |</span> <strong class="px-1 sitename">Full-Stack Developer |</strong>
+          <span>All Rights Reserved</span>
         </p>
       </div>
       <div class="credits">
-
         <p class="mb-0">Designed and Developed by Sani Yadav</p>
-
-        <!-- Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> Distributed by <a
-          href="https://themewagon.com">ThemeWagon</a> -->
       </div>
     </div>
-
   </footer>
 
-
-
-
   <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
-      class="bi bi-arrow-up-short"></i></a>
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center">
+    <i class="bi bi-arrow-up-short"></i>
+  </a>
 
   <!-- Preloader -->
   <div id="preloader"></div>
