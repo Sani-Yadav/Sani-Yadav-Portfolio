@@ -3,7 +3,7 @@ services:
     name: sani-yadav-portfolio
     env: python
     buildCommand: ./build.sh
-    startCommand: gunicorn portfolio.wsgi:application
+    startCommand: cd portfolio && gunicorn portfolio.wsgi:application
     envVars:
       - key: SECRET_KEY
         generateValue: true
