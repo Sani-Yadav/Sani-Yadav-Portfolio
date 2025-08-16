@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: sani-yadav-portfolio
+    env: python
+    buildCommand: ./build.sh
+    startCommand: cd portfolio && gunicorn portfolio.wsgi:application
+    envVars:
+      - key: SECRET_KEY
+        generateValue: true
+      - key: PYTHON_VERSION
+        value: 3.10.0
+    autoDeploy: true
