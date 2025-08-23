@@ -1,7 +1,4 @@
 
-
-#SaniYadav-Portfolio Live Portfolio:-  https://2e989848-e6c1-4843-814e-4b207afed496-00-1fk2o7k1ojosd.pike.replit.dev/
-
 # 🌟 SaniYadav Portfolio
 
 A modern, responsive portfolio website built with Django and SQLite, featuring dynamic content management through Django Admin. Showcase your projects, skills, and professional experience with style.
