@@ -16,15 +16,29 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from django.contrib.sitemaps.views import sitemap
+from django.contrib.sitemaps import GenericSitemap
+from django.contrib.sites.models import Site
 from webapp import views
+from webapp.sitemap import StaticViewSitemap
 from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
+# Sitemap configuration
+sitemaps = {
+    'static': StaticViewSitemap,
+    # Add other sitemaps here if needed
+}
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('webapp.urls')),
-    path('project4.html', views.project4, name='project4')
+    path('project4.html', views.project4, name='project4'),
+    # Sitemap URL
+    path('sitemap.xml', sitemap, {'sitemaps': sitemaps}, name='django.contrib.sitemaps.views.sitemap'),
+    # Robots.txt
+    path('robots.txt', include('robots.urls')),
 ]
 
 # For serving static files in development

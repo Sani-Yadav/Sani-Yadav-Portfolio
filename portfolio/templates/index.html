@@ -7,9 +7,25 @@
   <!-- Meta Information -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sani Yadav - Portfolio</title>
-  <meta name="description" content="">
-  <meta name="keywords" content="">
+  <title>Sani Yadav | Full Stack Developer & Python/Django Expert</title>
+  <meta name="description" content="Sani Yadav - Full Stack Developer & Python/Django Expert. Specializing in web development, responsive design, and building scalable applications. Check out my portfolio and projects.">
+  <meta name="keywords" content="Full Stack Developer, Python Developer, Django Developer, Web Developer, Portfolio, Sani Yadav, Web Development, Responsive Design">
+  <!-- Google Search Console Verification -->
+  <meta name="google-site-verification" content="YOUR_VERIFICATION_CODE" />
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://sani-yadav-portfolio-9.onrender.com/">
+  <meta property="og:title" content="Sani Yadav | Full Stack Developer & Python/Django Expert">
+  <meta property="og:description" content="Portfolio of Sani Yadav - Full Stack Developer specializing in Python, Django, and modern web technologies. Explore my projects and skills.">
+  <meta property="og:image" content="{% static 'img/sani2.0.jpg' %}">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://sani-yadav-portfolio-9.onrender.com/">
+  <meta property="twitter:title" content="Sani Yadav | Full Stack Developer & Python/Django Expert">
+  <meta property="twitter:description" content="Portfolio of Sani Yadav - Full Stack Developer specializing in Python, Django, and modern web technologies.">
+  <meta property="twitter:image" content="{% static 'img/sani2.0.jpg' %}">
 
   <!-- Favicons -->
   <link rel="icon" href="{% static 'img/favicon.png' %}">
@@ -33,7 +49,32 @@
   <link rel="stylesheet" href="{% static 'vendor/swiper/swiper-bundle.min.css' %}" media="print" onload="this.media='all'">
 
   <!-- Main CSS File (Critical) -->
-   <link rel="stylesheet" href="{% static 'css/main.css' %}" rel="preload" as="style" onload="this.rel='stylesheet'">
+  <link rel="stylesheet" href="{% static 'css/main.css' %}">
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Sani Yadav",
+    "url": "https://sani-yadav-portfolio-9.onrender.com",
+    "sameAs": [
+      "https://github.com/saniyadavv",
+      "https://www.linkedin.com/in/sani-yadav-6b0b8b1b4/"
+    ],
+    "jobTitle": "Full Stack Developer",
+    "worksFor": {
+      "@type": "Organization",
+      "name": "Freelance"
+    },
+    "description": "Full Stack Developer specializing in Python, Django, and modern web technologies.",
+    "image": "{% static 'img/sani2.0.jpg' %}",
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "India"
+    }
+  }
+  </script>
 </head>
 
 <body class="index-page">
@@ -44,7 +85,7 @@
 
     <!-- Profile Image -->
     <div class="profile-img">
-      <img src="{% static 'img/sani2.0.jpg' %}" alt="" class="img-fluid rounded-circle">
+      <img src="{% static 'img/sani2.0.jpg' %}" alt="Sani Yadav - Full Stack Developer" class="img-fluid rounded-circle">
     </div>
 
     <!-- Logo -->
@@ -91,7 +132,7 @@
           </ul>
         </li>
         <li><a href="#contact"><i class="bi bi-envelope navicon"></i> Contact</a></li>
-      </ul>
+      </ul> 
     </nav>
   </header>
 
@@ -102,7 +143,7 @@
       <img src="{% static 'img/img1.jpg' %}" alt="" data-aos="fade-in" class="">
       <div class="container" data-aos="fade-up" data-aos-delay="100">
         <h2>Sani Yadav</h2>
-        <p>I'm <span class="typed" data-typed-items="Full Stack Python Developer, Freelancer">Designer</span><span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span><span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span></p>
+        <p>I'm <span class="typed" data-typed-items="Full Stack Python Developer, Freelancer, Web Designer"></span><span class="typed-cursor" aria-hidden="true"></span></p>
       </div>
     </section>
 
@@ -111,7 +152,9 @@
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
         <h2>About</h2>
-        <p>I am a Full-Stack Python Developer with 6 months of experience in HTML, CSS, Bootstrap, JavaScript, jQuery, Python, Django, MySQL, and Git. I’ve developed 35+ scalable web applications with smooth API integration. I previously interned at Softflew Software Services, Lucknow, and am currently interning as a Full-Stack Developer. Passionate about problem-solving, I aspire to work at top tech companies like Google or Microsoft.</p>
+        <p>I am a Full-Stack Python Developer with 1 year of experience in Django, Python, MySQL, and Frontend technologies. I’ve built 35+ web applications with API integration. I interned at Softflew Software Services and currently work as a Full-Stack Developer Intern.
+
+           Currently pursuing MCA from AKTU, Lucknow, I am passionate about problem-solving and aim to work at top tech companies like Google or Microsoft.</p>
       </div><!-- End Section Title -->
 
       <!-- About Content -->
@@ -137,7 +180,7 @@
               <div class="col-lg-6">
                 <ul>
                   <li><i class="bi bi-chevron-right"></i> <strong>Age:</strong> <span>22 Years</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Degree:</strong> <span>Bca</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Degree:</strong> <span>MCA</span></li>
                   <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong> <span>sani228142@gmail.com</span></li>
                   <li><i class="bi bi-chevron-right"></i> <strong>Freelance:</strong> <span>Available</span></li>
                 </ul>
@@ -220,7 +263,7 @@
             <div class="progress">
               <span class="skill"><span>CSS</span> <i class="val">90%</i></span>
               <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
+                <div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
                 </div>
               </div>
             </div><!-- End Skills Item -->
@@ -228,7 +271,7 @@
             <div class="progress">
               <span class="skill"><span>JavaScript/JQuerie</span> <i class="val">75%</i></span>
               <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                <div class="progress-bar" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
                 </div>
               </div>
             </div><!-- End Skills Item -->
@@ -238,7 +281,7 @@
             <div class="progress">
               <span class="skill"><span>Python</span> <i class="val">80%</i></span>
               <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
+                <div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
                 </div>
               </div>
             </div><!-- End Skills Item -->
@@ -246,7 +289,7 @@
             <div class="progress">
               <span class="skill"><span>Django</span> <i class="val">90%</i></span>
               <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
+                <div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
                 </div>
               </div>
             </div><!-- End Skills Item -->
@@ -254,7 +297,7 @@
             <div class="progress">
               <span class="skill"><span>SQL Databases:</span> <i class="val">55%</i></span>
               <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100">
+                <div class="progress-bar" role="progressbar" style="width: 55%" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100">
                 </div>
               </div>
             </div><!-- End Skills Item -->
@@ -275,9 +318,9 @@
         <div class="row skills-content skills-animation">
           <div class="col-lg-6">
             <div class="progress">
-              <span class="skill"><span>Git/GitHub</span> <i class="val">700%</i></span>
+              <span class="skill"><span>Git/GitHub</span> <i class="val">90%</i></span>
               <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+                <div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
                 </div>
               </div>
             </div><!-- End Skills Item -->
@@ -285,7 +328,7 @@
             <div class="progress">
               <span class="skill"><span>Linux Commands</span> <i class="val">90%</i></span>
               <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
+                <div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
                 </div>
               </div>
             </div><!-- End Skills Item -->
@@ -293,7 +336,7 @@
             <div class="progress">
               <span class="skill"><span>Debugging</span> <i class="val">75%</i></span>
               <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                <div class="progress-bar" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
                 </div>
               </div>
             </div><!-- End Skills Item -->
@@ -303,7 +346,7 @@
             <div class="progress">
               <span class="skill"><span>MongoDB</span> <i class="val">80%</i></span>
               <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
+                <div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
                 </div>
               </div>
             </div><!-- End Skills Item -->
@@ -311,7 +354,7 @@
             <div class="progress">
               <span class="skill"><span>Bootstrap</span> <i class="val">90%</i></span>
               <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
+                <div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
                 </div>
               </div>
             </div><!-- End Skills Item -->
@@ -319,7 +362,7 @@
             <div class="progress">
               <span class="skill"><span>Media Queries</span> <i class="val">55%</i></span>
               <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100">
+                <div class="progress-bar" role="progressbar" style="width: 55%" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100">
                 </div>
               </div>
             </div><!-- End Skills Item -->
@@ -333,7 +376,7 @@
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
         <h2>Resume</h2>
-        <button class="btn btn-primary" onclick="window.location.href='{% static 'img/resume.jpg.pdf' %}'">
+        <button class="btn btn-primary" id="resumeButton" data-pdf="{% static 'img/resume.jpg.pdf' %}">
           <i class="fa-solid fa-file-pdf"></i>
         </button>
         <br>
@@ -729,7 +772,7 @@
                       growth.</span>
                     <i class="bi bi-quote quote-icon-right"></i>
                   </p>
-                  <img src="{% static 'img/sani2.0.jpg' %}" class="testimonial-img" alt="">
+                  <img src="{% static 'img/my-profile-img.jpg' %}" class="testimonial-img" alt="Sani Yadav">
                   <h3>Sani Yadav</h3>
                   <h4>Ceo &amp; Founder</h4>
                 </div>
@@ -744,7 +787,7 @@
                       decision-making to meet objectives.</span>
                     <i class="bi bi-quote quote-icon-right"></i>
                   </p>
-                  <img src="{% static 'img/vk.jpg' %}" class="testimonial-img" alt="Designer Vikas Pal">
+                  <img src="{% static 'img/my-profile-img.jpg' %}" class="testimonial-img" alt="Vikas Pal">
                   <h3>Er.Vikas Pal</h3>
                   <h4> President & Designer</h4>
                 </div>
@@ -774,7 +817,7 @@
                       and vision.</span>
                     <i class="bi bi-quote quote-icon-right"></i>
                   </p>
-                  <img src="{% static 'img/azad2.jpg' %}" class="testimonial-img" alt="">
+                  <img src="{% static 'img/azad2.jpg' %}" class="testimonial-img" alt="Azad Yadav">
                   <h3>Azad Yadav</h3>
                   <h4>Board of Directors</h4>
                 </div>
@@ -789,7 +832,7 @@
                       long-term success.</span>
                     <i class="bi bi-quote quote-icon-right"></i>
                   </p>
-                  <img src="{% static 'img/ayush.jpg' %}" class="testimonial-img" alt="">
+                  <img src="{% static 'img/ayush.jpg' %}" class="testimonial-img" alt="Ayush Shukla">
                   <h3>Ayush Shukla</h3>
                   <h4>Chief Technology Officer (CTO)</h4>
                 </div>
@@ -839,10 +882,21 @@
                   </div>
                 </div><!-- End Info Item -->
 
-                <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3559.845377888799!2d80.94615967510754!3d26.84669307671807!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399be2ae2c693c3f%3A0x57b7e64860d7b8f7!2sLucknow%2C%20Uttar%20Pradesh!5e0!3m2!1sen!2sin!4v1715670162493!5m2!1sen!2sin"
-                  frameborder="0" style="border:0; width: 100%; height: 270px;" allowfullscreen="" loading="lazy"
-                  referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <div class="map-container" data-aos="fade-up">
+                  <div class="map-loading">
+                    <div class="spinner-border text-primary" role="status">
+                      <span class="visually-hidden">Loading...</span>
+                    </div>
+                  </div>
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3559.845377888799!2d80.94615967510754!3d26.84669307671807!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399be2ae2c693c3f%3A0x57b7e64860d7b8f7!2sLucknow%2C%20Uttar%20Pradesh!5e0!3m2!1sen!2sin!4v1715670162493!5m2!1sen!2sin"
+                    class="google-map"
+                    allowfullscreen="" 
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                    onload="this.parentNode.querySelector('.map-loading').style.display='none';">
+                  </iframe>
+                </div>
               </div>
             </div>
         <!--start contect form-->
@@ -889,20 +943,12 @@
 
  {% if messages %}
     {% for message in messages %}
-      <div class="alert alert-success alert-dismissible fade show mt-3 mx-3" role="alert">
+      <div class="alert alert-{{ message.tags|default:'info' }} alert-dismissible fade show mt-3 mx-3" role="alert">
         {{ message }}
         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
       </div>
     {% endfor %}
   {% endif %}
-
-  {% if messages %}
-  <script>
-    {% for message in messages %}
-      alert("{{ message|escapejs }}");
-    {% endfor %}
-  </script>
-{% endif %}
 
 
 
@@ -954,8 +1000,68 @@
   <script src="{% static 'vendor/swiper/swiper-bundle.min.js' %}" defer></script>
   <script src="{% static 'vendor/email-form/validate_new.js' %}" defer></script>
 
+  <!-- Dark Mode Toggle Button -->
+  <button class="dark-mode-toggle" id="darkModeToggle" title="Toggle Dark Mode">
+    <i class="bi bi-moon-fill"></i>
+  </button>
+
   <!-- Main JS File -->
-  <script src="{% static 'js/main.js' %}" defer></script>
+  <script src="{% static 'js/main.js' %}"></script>
+
+  <!-- Typed.js Initialization -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Initialize Typed.js
+      if (document.querySelector('.typed')) {
+        var typed = new Typed('.typed', {
+          strings: ['Full Stack Python Developer', 'Freelancer', 'Web Designer'],
+          typeSpeed: 100,
+          backSpeed: 50,
+          backDelay: 3000,  // 3 seconds delay before backspacing
+          loop: true
+        });
+      }
+      
+      // Dark Mode Script
+      const toggle = document.getElementById('darkModeToggle');
+      const icon = toggle.querySelector('i');
+      
+      // Check for saved theme preference
+      const currentTheme = localStorage.getItem('theme') || 'light';
+      
+      // Apply saved theme
+      if (currentTheme === 'dark') {
+        document.body.classList.add('dark-mode');
+        icon.classList.replace('bi-moon-fill', 'bi-sun-fill');
+      }
+      
+      // Toggle function
+      toggle.onclick = function() {
+        if (document.body.classList.contains('dark-mode')) {
+          // Switch to light
+          document.body.classList.remove('dark-mode');
+          icon.classList.replace('bi-sun-fill', 'bi-moon-fill');
+          localStorage.setItem('theme', 'light');
+        } else {
+          // Switch to dark
+          document.body.classList.add('dark-mode');
+          icon.classList.replace('bi-moon-fill', 'bi-sun-fill');
+          localStorage.setItem('theme', 'dark');
+        }
+      };
+
+      // Handle resume button click
+      const resumeButton = document.getElementById('resumeButton');
+      if (resumeButton) {
+        resumeButton.addEventListener('click', function() {
+          const pdfUrl = this.getAttribute('data-pdf');
+          if (pdfUrl) {
+            window.open(pdfUrl, '_blank');
+          }
+        });
+      }
+    });
+  </script>
 </body>
 
 </html>

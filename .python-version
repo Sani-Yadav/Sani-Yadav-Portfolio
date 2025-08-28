@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# exit on errorset -o errexitpip install -r requirements.txtpython portfolio/manage.py collectstatic --no-inputpython portfolio/manage.py migrate
+
+ALLOWED_HOSTS = [
+    'sani-yadav-portfolio-9.onrender.com',
+    'localhost',
+    '127.0.0.1'
+]

@@ -3,10 +3,19 @@ services:
     name: sani-yadav-portfolio
     env: python
     buildCommand: ./build.sh
-    startCommand: cd portfolio && gunicorn portfolio.wsgi:application
+    startCommand: gunicorn portfolio.wsgi:application --log-file -
     envVars:
-      - key: SECRET_KEY
-        generateValue: true
       - key: PYTHON_VERSION
         value: 3.10.0
+      - key: PORT
+        value: 10000
+      - key: PYTHONUNBUFFERED
+        value: 1
+      - key: GUNICORN_CMD_ARGS
+        value: --workers=4 --worker-class=gevent --worker-connections=1000
     autoDeploy: true
+    plan: free
+    disk:
+      name: media
+      mountPath: /opt/render/project/src/media
+      sizeGB: 1
