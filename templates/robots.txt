@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://sani-yadav-portfolio-9.onrender.com/sitemap.xml

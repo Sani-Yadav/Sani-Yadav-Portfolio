@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Starter Page</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/webp" href="{% static 'img/optimized/favicon.webp' %}">
+  <link rel="icon" type="image/png" href="{% static 'img/favicon.png' %}">
+  <link rel="apple-touch-icon" href="{% static 'img/optimized/apple-touch-icon.webp' %}">
+  <link rel="apple-touch-icon" href="{% static 'img/apple-touch-icon.png' %}">
+  
+  <!-- Preload critical images -->
+  <link rel="preload" href="{% static 'img/optimized/logo.webp' %}" as="image" type="image/webp">
+  <link rel="preload" href="{% static 'img/logo.png' %}" as="image" type="image/png">
+  <link rel="preload" href="{% static 'img/optimized/my-profile-img.webp' %}" as="image" type="image/webp">
+  <link rel="preload" href="{% static 'img/my-profile-img.jpg' %}" as="image" type="image/jpeg">
+
+  {% load static %}
+  <!-- Preconnect to external domains -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+  
+  <!-- Preload critical resources -->
+  <link rel="preload" href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" as="style" onload="this.rel='stylesheet'">
+  <link rel="preload" href="{% static 'css/main.css' %}" as="style" onload="this.rel='stylesheet'">
+  
+  <!-- Load Google Fonts with font-display: swap -->
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Poppins:wght@300;400;500;600;700&family=Raleway:wght@300;400;500;600;700&display=swap" as="style" onload="this.rel='stylesheet'">
+  
+  <!-- Load other CSS asynchronously -->
+  <link href="{% static 'vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet" media="print" onload="this.media='all'">
+  <link href="{% static 'vendor/aos/aos.css' %}" rel="stylesheet" media="print" onload="this.media='all'">
+  <link href="{% static 'vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet" media="print" onload="this.media='all'">
+  <link href="{% static 'vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet" media="print" onload="this.media='all'">
+  
+  <!-- Fallback for non-JS -->
+  <noscript>
+    <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'css/main.css' %}" rel="stylesheet">
+    <link href="{% static 'vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+    <link href="{% static 'vendor/aos/aos.css' %}" rel="stylesheet">
+    <link href="{% static 'vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
+    <link href="{% static 'vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+  </noscript>
+
+  
+</head>
+
+<body class="starter-page-page">
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="header dark-background d-flex flex-column">
+    <i class="header-toggle d-xl-none bi bi-list"></i>
+
+    <div class="profile-img">
+      <picture>
+        <source srcset="{% static 'img/optimized/my-profile-img.webp' %}" type="image/webp">
+        <img 
+          src="{% static 'img/my-profile-img.jpg' %}" 
+          class="img-fluid rounded-circle" 
+          alt="Profile Photo"
+          loading="lazy"
+          width="200"
+          height="200"
+        >
+      </picture>
+    </div>
+
+    <a href="index.html" class="logo d-flex align-items-center justify-content-center">
+      <!-- Uncomment below if you prefer an image logo -->
+      <picture>
+        <source srcset="{% static 'img/optimized/logo.webp' %}" type="image/webp">
+        <img 
+          src="{% static 'img/logo.png' %}" 
+          alt="Logo" 
+          class="img-fluid"
+          loading="lazy"
+          width="150"
+          height="50"
+        >
+      </picture>
+      <h1>Sani Yadav</h1>   
+    </a>
+
+    <div class="social-links text-center">
+      <a href="#" class="twitter"><i class="bi bi-twitter-x"></i></a>
+      <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+      <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+      <a href="#" class="google-plus"><i class="bi bi-skype"></i></a>
+      <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+    </div>
+
+    <!-- Navigation Menu -->
+    <nav id="navmenu" class="navmenu">
+      <ul>
+        <li><a href="#hero"><i class="bi bi-house navicon"></i> Home</a></li>
+        <li><a href="#about"><i class="bi bi-person navicon"></i> About</a></li>
+        <li><a href="#resume"><i class="bi bi-file-earmark-text navicon"></i> Resume</a></li>
+        <li><a href="#portfolio"><i class="bi bi-images navicon"></i> Portfolio</a></li>
+        <li><a href="#services"><i class="bi bi-hdd-stack navicon"></i> Services</a></li>
+        <li class="dropdown">
+          <a href="#"><i class="bi bi-menu-button navicon"></i> <span>Dropdown</span> <i
+              class="bi bi-chevron-down toggle-dropdown"></i></a>
+          <ul>
+            <li><a href="#">Dropdown 1</a></li>
+            <li class="dropdown">
+              <a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+              <ul>
+                <li><a href="#">Deep Dropdown 1</a></li>
+                <li><a href="#">Deep Dropdown 2</a></li>
+                <li><a href="#">Deep Dropdown 3</a></li>
+                <li><a href="#">Deep Dropdown 4</a></li>
+                <li><a href="#">Deep Dropdown 5</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Dropdown 2</a></li>
+            <li><a href="#">Dropdown 3</a></li>
+            <li><a href="#">Dropdown 4</a></li>
+          </ul>
+        </li>
+        <li><a href="#contact"><i class="bi bi-envelope navicon"></i> Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <!-- End Header -->
+
+  <!-- ======= Main ======= -->
+  <main class="main">
+
+    <!-- Page Title -->
+    <div class="page-title dark-background">
+      <div class="container d-lg-flex justify-content-between align-items-center">
+        <h1 class="mb-2 mb-lg-0">Starter Page</h1>
+        <nav class="breadcrumbs">
+          <ol>
+            <li><a href="index.html">Home</a></li>
+            <li class="current">Starter Page</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+    <!-- End Page Title -->
+
+    <!-- Starter Section -->
+    <section id="starter-section" class="starter-section section">
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Starter Section</h2>
+        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+      </div>
+      <!-- Content -->
+      <div class="container" data-aos="fade-up">
+        <p>Use this page as a starter for your own custom pages.</p>
+      </div>
+    </section>
+    <!-- End Starter Section -->
+
+  </main>
+  <!-- End Main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer" class="footer position-relative light-background">
+    <div class="container">
+      <div class="copyright text-center">
+        <p>© <span>Copyright</span>
+          <strong class="px-1 sitename">iPortfolio</strong>
+          <span>All Rights Reserved</span>
+        </p>
+      </div>
+      <div class="credits">
+        Designed by <a href="#">BootstrapMade</a> | Distributed by <a href="#">ThemeWagon</a>
+      </div>
+    </div>
+  </footer>
+  <!-- End Footer -->
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center">
+    <i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Load JavaScript with defer -->
+  <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}" defer></script>
+  <script src="{% static 'vendor/aos/aos.js' %}" defer></script>
+  <script src="{% static 'vendor/glightbox/js/glightbox.min.js' %}" defer></script>
+  <script src="{% static 'vendor/isotope-layout/isotope.pkgd.min.js' %}" defer></script>
+  <script src="{% static 'vendor/swiper/swiper-bundle.min.js' %}" defer></script>
+  
+  <!-- Main JS with error handling -->
+  <script>
+    // Error handling for all scripts
+    window.addEventListener('error', function(e) {
+      console.error('Script error:', e.message, 'in', e.filename, 'line', e.lineno);
+    }, true);
+    
+    // Initialize AOS after DOM is loaded
+    document.addEventListener('DOMContentLoaded', function() {
+      if (typeof AOS !== 'undefined') {
+        AOS.init({
+          duration: 800,
+          easing: 'ease-in-out',
+          once: true
+        });
+      }
+    });
+  </script>
+  
+  <!-- Main JS -->
+  <script src="{% static 'js/main.js' %}" defer></script>
+  <script src="assets/js/main.js"></script>
+
+</body>
+</html>
