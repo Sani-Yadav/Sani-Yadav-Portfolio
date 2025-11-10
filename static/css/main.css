@@ -1020,18 +1020,30 @@ section,
   box-sizing: content-box;
   text-align: center;
   min-height: 320px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .testimonials .testimonial-item .testimonial-img {
   width: 90px;
+  height: 90px;
   border-radius: 50%;
-  margin: 0 auto;
+  margin: 15px auto;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  border: 3px solid var(--accent-color);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .testimonials .testimonial-item h3 {
   font-size: 18px;
   font-weight: bold;
-  margin: 10px 0 5px 0;
+  margin: 15px 0 5px 0;
+  line-height: 1.4;
 }
 
 .testimonials .testimonial-item h4 {
@@ -1063,13 +1075,15 @@ section,
 
 .testimonials .testimonial-item p {
   font-style: italic;
-  margin: 0 15px 15px 15px;
-  padding: 20px;
+  margin: 0 15px 25px 15px;
+  padding: 25px 20px;
   background-color: var(--surface-color);
   position: relative;
-  margin-bottom: 35px;
   border-radius: 6px;
   box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+  min-height: 120px;
+  line-height: 1.8;
+  text-align: center;
 }
 
 .testimonials .testimonial-item p::after {
@@ -1086,6 +1100,18 @@ section,
 
 .testimonials .swiper-wrapper {
   height: auto;
+  align-items: stretch;
+}
+
+.testimonials .swiper-slide {
+  height: auto;
+  display: flex;
+  align-items: stretch;
+}
+
+.testimonials .swiper-slide > .testimonial-item {
+  width: 100%;
+  height: 100%;
 }
 
 .testimonials .swiper-pagination {
