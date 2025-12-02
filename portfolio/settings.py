@@ -11,10 +11,15 @@ import os
 SECRET_KEY = os.environ.get('SECRET_KEY', 'django-insecure-6c*1^zk2s^h8ysg*fw^#qhhx_=+y@!&x&!@ry5z*#+doam7*tf')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.environ.get('DEBUG', 'True') == 'True'
+DEBUG = os.environ.get('DEBUG', 'False') == 'True'
 
 ALLOWED_HOSTS = [
    "*"
+]
+
+# CSRF Settings for production
+CSRF_TRUSTED_ORIGINS = [
+    'https://sani-portfolio.onrender.com',
 ]
 
 # Application definition
@@ -128,6 +133,7 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 # Email Settings (Gmail SMTP)
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
+EMAIL_USE_TLS = True
 EMAIL_HOST_USER = 'saniyadav7755@gmail.com'
 EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD')
 
