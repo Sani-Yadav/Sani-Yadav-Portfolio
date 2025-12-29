@@ -1,0 +1,115 @@
+:root{
+  --bg: #ffffff;
+  --text: #1f2937;
+  --muted: #6b7280;
+  --accent: #0ea5a4;
+  --card-bg: #ffffff;
+  --border: rgba(15,23,42,0.06);
+  --shadow: 0 4px 18px rgba(2,6,23,0.06);
+  --glass: rgba(255,255,255,0.6);
+  --link: #0b74d1;
+}
+
+[data-theme="dark"]{
+  --bg: #0b1020;
+  --text: #e6eef8;
+  --muted: #9aa6b2;
+  --accent: #06b6d4;
+  --card-bg: #0f1724;
+  --border: rgba(255,255,255,0.06);
+  --shadow: 0 6px 22px rgba(2,6,23,0.6);
+  --glass: rgba(10,14,20,0.4);
+  --link: #7bdff6;
+}
+
+/* Smooth transition for themeable properties */
+html, body, .card, .modal-content, .navbar, .footer, header, section, main {
+  transition: background-color 300ms ease, color 300ms ease, border-color 300ms ease, box-shadow 300ms ease;
+}
+
+body{
+  background: var(--bg);
+  color: var(--text);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+
+a, a:hover, a:focus{ color: var(--link); }
+
+/* Cards, panels */
+.card, .panel, .site-card{
+  background: var(--card-bg);
+  color: var(--text);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+}
+
+/* Navbar/footer */
+header, .navbar, .footer, .site-footer{
+  background: linear-gradient(180deg, transparent, rgba(0,0,0,0.02));
+  color: var(--text);
+  border-color: var(--border);
+}
+
+/* Forms and inputs */
+input, textarea, select, .form-control{
+  background: linear-gradient(180deg, var(--card-bg), var(--card-bg));
+  color: var(--text) !important;
+  border: 1px solid var(--border) !important;
+}
+
+/* Tables */
+table, thead, tbody, tr, th, td{
+  color: var(--text);
+}
+
+/* Modal */
+.modal-content{
+  background: var(--card-bg);
+  color: var(--text);
+  border: 1px solid var(--border);
+}
+
+/* Buttons - keep bootstrap styles but provide subtle accent variants */
+.btn-accent{
+  background: var(--accent);
+  color: #fff;
+  border: 1px solid rgba(255,255,255,0.05);
+}
+
+/* Theme toggle control */
+.theme-toggle{
+  display:flex;align-items:center;gap:8px;cursor:pointer;z-index:9999;
+}
+.theme-toggle-button{
+  --w:48px; --h:28px;
+  width:var(--w);height:var(--h);display:inline-block;border-radius:999px;padding:3px;position:relative;
+  background: linear-gradient(180deg, rgba(0,0,0,0.04), rgba(255,255,255,0.02));
+  border:1px solid var(--border);box-shadow: var(--shadow);
+}
+.theme-toggle-knob{
+  width:22px;height:22px;border-radius:50%;background:linear-gradient(180deg,#fff, #f1f5f9);position:absolute;top:3px;left:3px;transition:all 280ms cubic-bezier(.2,.8,.2,1);
+}
+[data-theme="dark"] .theme-toggle-knob{ left: calc(100% - 25px); background: linear-gradient(180deg,#111827,#0b1220); }
+
+/* Floating style when injected into header or as fallback */
+.theme-toggle-wrapper{
+  position:relative;display:inline-flex;align-items:center;gap:10px;
+}
+
+/* Fallback floating button (mobile friendly) */
+.theme-toggle-fab{
+  position:fixed;right:16px;bottom:22px;display:flex;align-items:center;justify-content:center;padding:8px;border-radius:999px;background:var(--card-bg);border:1px solid var(--border);box-shadow:var(--shadow);z-index:9999;
+}
+
+/* Accessibility focus */
+.theme-toggle-button:focus{ outline: 3px solid rgba(10,132,255,0.12); }
+
+/* Ensure icons match theme */
+.theme-toggle svg{ fill: var(--text); }
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce){
+  html, body, .card, .modal-content{ transition:none !important; }
+  .theme-toggle-knob{ transition:none !important; }
+}

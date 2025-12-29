@@ -34,7 +34,7 @@
   
   <!-- Favicons -->
   <link href="{% static 'img/favicon.png' %}" rel="icon">
-  <link href="{% static 'img/apple-touch-icon.png' %}" rel="apple-touch-icon">
+  <link href="{% static 'img/apple-touch-icon.jpg' %}" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -52,6 +52,8 @@
   
   <!-- Template Main CSS File -->
   <link href="{% static 'css/style.css' %}" rel="stylesheet">
+  <!-- Theme (light/dark) -->
+  <link href="{% static 'theme.css' %}" rel="stylesheet">
   
   <!-- AOS Animation CSS -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -102,5 +104,7 @@
       });
     });
   </script>
+  <!-- Theme JS (adds toggle, persists preference) -->
+  <script src="{% static 'theme.js' %}"></script>
 </body>
 </html>
