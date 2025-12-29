@@ -112,7 +112,7 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 
 - **Name**: Sani Yadav
 - **Email**: saniyadav7755@gmail.com
-- **Portfolio**: [saniyadav.com](https://sani-yadav-portfolio.onrender.com/) (if applicable)
+- **Portfolio**: [saniyadav.com](https://saniyadav.com) (if applicable)
 - **LinkedIn**: [Your LinkedIn Profile](https://linkedin.com/in/yourusername)
 
 ## 🙏 Acknowledgments
