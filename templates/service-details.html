@@ -1,0 +1,235 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Web Development Services | Sani Yadav{% endblock %}
+
+{% block extra_css %}
+<style>
+  /* Styling to match User Screenshot Mockup */
+
+  /* Remove padding from section to align with top */
+  .service-details.section {
+    padding-top: 30px !important;
+    margin-top: 0 !important;
+  }
+
+  .service-details .service-box {
+    background: #111827;
+    /* Dark background matching mockup */
+    padding: 30px 20px;
+    border-radius: 20px;
+    height: auto;
+  }
+
+  .service-details .service-box h4 {
+    color: #fff;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 40px;
+  }
+
+  .service-details .services-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .service-details .services-list a {
+    display: flex;
+    align-items: center;
+    padding: 15px 18px;
+    background: #1f2937;
+    /* Darker card background */
+    color: #9ca3af;
+    /* Gray text */
+    text-decoration: none;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+    overflow: hidden;
+    word-wrap: break-word;
+  }
+
+  .service-details .services-list a i {
+    font-size: 20px;
+    margin-right: 15px;
+    color: #60a5fa;
+    /* Default icon color */
+    flex-shrink: 0;
+  }
+
+  /* Active state matching mockup - Blue background */
+  .service-details .services-list a.active {
+    background: #0ea5e9 !important;
+    color: #fff !important;
+    box-shadow: 0 10px 15px -3px rgba(14, 165, 233, 0.3);
+  }
+
+  .service-details .services-list a.active i {
+    color: #fff !important;
+  }
+
+  .service-details .services-list a:hover:not(.active) {
+    background: #374151;
+    color: #fff;
+  }
+
+  .service-details .services-img {
+    border-radius: 30px;
+    /* Highly rounded corners */
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    margin-bottom: 40px;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+  }
+
+  .service-details h3 {
+    font-size: 38px;
+    font-weight: 800;
+    color: #fff;
+    margin-bottom: 25px;
+  }
+
+  /* Blue highlight for heading text */
+  .service-details h3 span {
+    color: #7dd3fc;
+  }
+
+  .service-details p {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #9ca3af;
+  }
+
+  /* Quote Box Custom Styling */
+  .quote-box {
+    margin-top: 50px;
+    padding: 30px;
+    border-left: 5px solid #0ea5e9;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 0 20px 20px 0;
+  }
+
+  .quote-box p {
+    color: #fff !important;
+    font-style: italic;
+    margin-bottom: 0;
+  }
+
+  /* Help toggle / floating button style */
+  .floating-help {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    background: #0ea5e9;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 24px;
+    box-shadow: 0 10px 15px -3px rgba(14, 165, 233, 0.5);
+    z-index: 1000;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+
+  .floating-help:hover {
+    transform: scale(1.1);
+    color: #fff;
+  }
+
+  /* Hide base page title/breadcrumbs for this specific alignment */
+  .page-title {
+    display: none !important;
+  }
+</style>
+{% endblock %}
+
+{% block content %}
+
+<!-- Service Details Section -->
+<section id="service-details" class="service-details section">
+
+  <div class="container-fluid px-lg-5">
+
+    <div class="row gy-5">
+
+      <div class="col-lg-4" data-aos="fade-right">
+        <div class="service-box">
+          <h4>Services List</h4>
+          <div class="services-list">
+            <a href="?service=web-development"
+              class="{% if service == 'web-development' or service == 'web' or not service %}active{% endif %}">
+              <i class="bi bi-code-slash"></i>
+              <span>Web Development</span>
+            </a>
+            <a href="?service=python-django" class="{% if service == 'python-django' %}active{% endif %}">
+              <i class="bi bi-cpu"></i>
+              <span>Python / Django</span>
+            </a>
+            <a href="?service=frontend-development" class="{% if service == 'frontend-development' %}active{% endif %}">
+              <i class="bi bi-layout-wysiwyg"></i>
+              <span>Frontend Development</span>
+            </a>
+            <a href="?service=api-integration" class="{% if service == 'api-integration' %}active{% endif %}">
+              <i class="bi bi-plugin"></i>
+              <span>API Integration</span>
+            </a>
+            <a href="?service=database-solutions" class="{% if service == 'database-solutions' %}active{% endif %}">
+              <i class="bi bi-database"></i>
+              <span>Database Solutions</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-8 ps-lg-5" data-aos="fade-left">
+        {% if service == 'python-django' %}
+        <img src="{% static 'img/amz01.jpg' %}" alt="Python Django" class="services-img">
+        <h3>Professional <span>Python & Django</span> Solutions</h3>
+        <p>
+          I build robust, secure, and scalable web backends using Python and the Django Framework. My focus is on
+          writing clean, maintainable code that powers seamless user experiences.
+        </p>
+        {% elif service == 'frontend-development' %}
+        <img src="{% static 'img/01new.jpg' %}" alt="Frontend" class="services-img">
+        <h3>Modern <span>Frontend</span> Development</h3>
+        <p>
+          Turning designs into pixel-perfect, responsive reality. I specialize in building fast, interactive frontend
+          solutions using React, modern CSS, and fluid animations.
+        </p>
+        {% else %}
+        <img src="{% static 'img/services.jpg' %}" alt="Web Development" class="services-img">
+        <h3>Full-Stack Modern <span>Web Solutions</span></h3>
+        <p>
+          I offer end-to-end development services, from initial architecture design to final deployment. Whether it's a
+          dynamic web app or a professional corporate site, I deliver results that exceed expectations.
+        </p>
+        {% endif %}
+
+        <div class="quote-box">
+          <p>
+            "My mission is to bridge the gap between complex technology and intuitive user experiences. Every line of
+            code is written with performance and scalability in mind."
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- Floating Help/Sun Button matching mockup -->
+<a href="{% url 'home' %}#contact" class="floating-help">
+  <i class="bi bi-brightness-high"></i>
+</a>
+
+{% endblock %}

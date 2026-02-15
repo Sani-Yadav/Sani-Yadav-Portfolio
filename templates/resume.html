@@ -1,0 +1,111 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Resume - Sani Yadav Portfolio{% endblock %}
+
+{% block content %}
+<main class="main">
+
+    <!-- Page Title -->
+    <div class="page-title dark-background">
+        <div class="container d-lg-flex justify-content-between align-items-center">
+            <h1 class="mb-2 mb-lg-0">Resume</h1>
+            <nav class="breadcrumbs">
+                <ol>
+                    <li><a href="{% url 'home' %}">Home</a></li>
+                    <li class="current">Resume</li>
+                </ol>
+            </nav>
+        </div>
+    </div><!-- End Page Title -->
+
+    <!-- Resume Section -->
+    <section id="resume" class="resume section">
+
+        <!-- Section Title -->
+        <div class="container section-title" data-aos="fade-up">
+            <h2>Professional Experience & Education</h2>
+            <p>I am a highly motivated and results-driven Full-Stack Developer with expertise in HTML, CSS, JavaScript,
+                Python, Django, SQL, and GitHub.</p>
+        </div><!-- End Section Title -->
+
+        <div class="container">
+            <div class="row">
+
+                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+                    <h3 class="resume-title">Summary</h3>
+                    <div class="resume-item pb-0">
+                        {% if smry %}
+                        {% for item in smry %}
+                        <h4>{{ item.name }}</h4>
+                        <p><em>{{ item.summary }}</em></p>
+                        <ul>
+                            <li>{{ item.college }}</li>
+                            <li>{{ item.phone }}</li>
+                            <li>{{ item.email }}</li>
+                        </ul>
+                        {% endfor %}
+                        {% else %}
+                        <!-- Fallback Summary -->
+                        <h4>Sani Yadav</h4>
+                        <p><em>Dedicated and efficient Full Stack Developer with 1+ years of experience.</em></p>
+                        <ul>
+                            <li>MCA Student, AKTU</li>
+                            <li>+91 7755027538</li>
+                            <li>sani228142@gmail.com</li>
+                        </ul>
+                        {% endif %}
+                    </div>
+
+                    <h3 class="resume-title">Education</h3>
+                    {% if education %}
+                    {% for item in education %}
+                    <div class="resume-item">
+                        <h4>{{ item.title }}</h4>
+                        {% if item.date %}<h5>{{ item.date|date:"Y" }}</h5>{% endif %}
+                        <p>{{ item.text_area }}</p>
+                    </div>
+                    {% endfor %}
+                    {% else %}
+                    <!-- Fallback Education -->
+                    <div class="resume-item">
+                        <h4>Master of Computer Applications</h4>
+                        <h5>2022 - 2024</h5>
+                        <p>AKTU, Lucknow</p>
+                    </div>
+                    {% endif %}
+                </div>
+
+                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+                    <h3 class="resume-title">Professional Experience</h3>
+
+                    {% if resume %}
+                    {% for item in resume %}
+                    <div class="resume-item">
+                        <h4>{{ item.title }}</h4>
+                        {% if item.date %}<h5>{{ item.date|date:"Y" }}</h5>{% endif %}
+                        <p>{{ item.text_area }}</p>
+                    </div>
+                    {% endfor %}
+                    {% else %}
+                    <!-- Fallback Experience -->
+                    <div class="resume-item">
+                        <h4>Full Stack Developer Intern</h4>
+                        <h5>2024 - Present</h5>
+                        <p><em>Skyview Smart Solutions, Lucknow</em></p>
+                        <ul>
+                            <li>Developing scalable web applications using Python and Django.</li>
+                            <li>Collaborating with cross-functional teams.</li>
+                        </ul>
+                    </div>
+                    {% endif %}
+
+                </div>
+
+            </div>
+        </div>
+
+    </section><!-- /Resume Section -->
+
+</main>
+{% endblock %}

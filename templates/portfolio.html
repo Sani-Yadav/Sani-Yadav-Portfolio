@@ -1,0 +1,182 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Portfolio - Sani Yadav Portfolio{% endblock %}
+
+{% block content %}
+<main class="main">
+
+    <!-- Page Title -->
+    <div class="page-title dark-background">
+        <div class="container d-lg-flex justify-content-between align-items-center">
+            <h1 class="mb-2 mb-lg-0">Portfolio</h1>
+            <nav class="breadcrumbs">
+                <ol>
+                    <li><a href="{% url 'home' %}">Home</a></li>
+                    <li class="current">Portfolio</li>
+                </ol>
+            </nav>
+        </div>
+    </div><!-- End Page Title -->
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio section">
+        <div class="container" data-aos="fade-up">
+
+            <div class="container section-title" data-aos="fade-up">
+                <h2>My Python & Django Projects</h2>
+                <p>Explore my portfolio of web applications built with Python, Django, React, and modern web
+                    technologies.</p>
+            </div>
+
+            <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
+
+                <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
+                    <li data-filter="*" class="filter-active">All</li>
+                    <li data-filter=".filter-app">E-commerce Website</li>
+                    <li data-filter=".filter-branding">Personal Projects</li>
+                    <li data-filter=".filter-books">Project</li>
+                    <li data-filter=".filter-product">Services</li>
+                </ul><!-- End Portfolio Filters -->
+
+                <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
+
+                    <!-- Portfolio Item 1 -->
+                    <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+                        <div class="portfolio-content h-100">
+                            <img src="{% static 'img/01new.jpg' %}" class="img-fluid" alt="Shree Krishna Restaurant"
+                                width="400" height="300" loading="lazy">
+                            <div class="portfolio-info">
+                                <h3>Shree Krishna Restaurant</h3>
+                                <p>Full-stack restaurant management system with online food ordering and table booking
+                                    functionality.</p>
+                                <div class="tech-stack">
+                                    <span class="badge bg-primary me-1">Django</span>
+                                    <span class="badge bg-secondary me-1">React</span>
+                                    <span class="badge bg-info text-dark me-1">PostgreSQL</span>
+                                </div>
+                                <a href="{% static 'img/01new.jpg' %}" title="Shree Krishna Restaurant"
+                                    data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i
+                                        class="bi bi-zoom-in"></i></a>
+                                <a href="{% url 'portfolio_details' %}" title="More Details" class="details-link"><i
+                                        class="bi bi-link-45deg"></i></a>
+                            </div>
+                        </div>
+                    </div><!-- End Portfolio Item 1 -->
+
+                    <!-- Portfolio Item 2 -->
+                    <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
+                        <div class="portfolio-content h-100">
+                            <img src="{% static 'img/image.png' %}" class="img-fluid" alt="Amazon Clone" width="400"
+                                height="300" loading="lazy">
+                            <div class="portfolio-info">
+                                <h3>Amazon Clone</h3>
+                                <p>Full-featured e-commerce platform with user authentication, product catalog, and
+                                    secure payments.</p>
+                                <div class="tech-stack">
+                                    <span class="badge bg-primary me-1">Django</span>
+                                    <span class="badge bg-secondary me-1">React</span>
+                                    <span class="badge bg-warning text-dark me-1">Stripe</span>
+                                </div>
+                                <a href="{% static 'img/image.png' %}" title="Amazon Clone"
+                                    data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i
+                                        class="bi bi-zoom-in"></i></a>
+                                <a href="{% url 'project2' %}" title="More Details" class="details-link"><i
+                                        class="bi bi-link-45deg"></i></a>
+                            </div>
+                        </div>
+                    </div><!-- End Portfolio Item 2 -->
+
+                    <!-- Portfolio Item 3 -->
+                    <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
+                        <div class="portfolio-content h-100">
+                            <img src="{% static 'img/03new.jpg' %}" class="img-fluid" alt="Legal Connect" width="400"
+                                height="300" loading="lazy">
+                            <div class="portfolio-info">
+                                <h3>Legal Connect</h3>
+                                <p>Comprehensive platform connecting clients with legal professionals.</p>
+                                <div class="tech-stack">
+                                    <span class="badge bg-primary me-1">Django</span>
+                                    <span class="badge bg-info text-dark me-1">PostgreSQL</span>
+                                </div>
+                                <a href="{% static 'img/03new.jpg' %}" title="Legal Connect"
+                                    data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i
+                                        class="bi bi-zoom-in"></i></a>
+                                <a href="{% url 'project4' %}" title="More Details" class="details-link"><i
+                                        class="bi bi-link-45deg"></i></a>
+                            </div>
+                        </div>
+                    </div><!-- End Portfolio Item 3 -->
+
+                    <!-- Portfolio Item 4 -->
+                    <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-books">
+                        <div class="portfolio-content h-100">
+                            <img src="{% static 'img/04new.jpg' %}" class="img-fluid" alt="Hostel Finder" width="400"
+                                height="300" loading="lazy">
+                            <div class="portfolio-info">
+                                <h3>Hostel Finder</h3>
+                                <p>Platform for students to find and book hostels with location-based search.</p>
+                                <div class="tech-stack">
+                                    <span class="badge bg-primary me-1">Django</span>
+                                    <span class="badge bg-info text-dark me-1">PostgreSQL</span>
+                                </div>
+                                <a href="{% static 'img/04new.jpg' %}" title="Hostel Finder"
+                                    data-gallery="portfolio-gallery-books" class="glightbox preview-link"><i
+                                        class="bi bi-zoom-in"></i></a>
+                                <a href="{% url 'project04' %}" title="More Details" class="details-link"><i
+                                        class="bi bi-link-45deg"></i></a>
+                            </div>
+                        </div>
+                    </div><!-- End Portfolio Item 4 -->
+
+                    <!-- Portfolio Item 5 -->
+                    <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
+                        <div class="portfolio-content h-100">
+                            <img src="{% static 'img/balaji01.jpg' %}" class="img-fluid" alt="Balaji Fortune"
+                                width="400" height="300" loading="lazy">
+                            <div class="portfolio-info">
+                                <h3>Balaji Fortune</h3>
+                                <p>Real estate website showcasing luxury properties with virtual tours.</p>
+                                <div class="tech-stack">
+                                    <span class="badge bg-primary me-1">Django</span>
+                                    <span class="badge bg-secondary me-1">React</span>
+                                </div>
+                                <a href="{% static 'img/balaji01.jpg' %}" title="Balaji Fortune"
+                                    data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i
+                                        class="bi bi-zoom-in"></i></a>
+                                <a href="{% url 'project06' %}" title="More Details" class="details-link"><i
+                                        class="bi bi-link-45deg"></i></a>
+                            </div>
+                        </div>
+                    </div><!-- End Portfolio Item 5 -->
+
+                    <!-- Portfolio Item 6 -->
+                    <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
+                        <div class="portfolio-content h-100">
+                            <img src="{% static 'img/new5.jpg' %}" class="img-fluid" alt="Nertera CCTV" width="400"
+                                height="300" loading="lazy">
+                            <div class="portfolio-info">
+                                <h3>Nertera CCTV</h3>
+                                <p>IoT-based security solution with real-time monitoring.</p>
+                                <div class="tech-stack">
+                                    <span class="badge bg-primary me-1">Django</span>
+                                    <span class="badge bg-secondary me-1">React Native</span>
+                                </div>
+                                <a href="{% static 'img/new5.jpg' %}" title="Nertera CCTV"
+                                    data-gallery="portfolio-gallery-personal" class="glightbox preview-link"><i
+                                        class="bi bi-zoom-in"></i></a>
+                                <a href="{% url 'portfolio_details' %}" title="More Details" class="details-link"><i
+                                        class="bi bi-link-45deg"></i></a>
+                            </div>
+                        </div>
+                    </div><!-- End Portfolio Item 6 -->
+
+                </div><!-- End Portfolio Container -->
+
+            </div>
+
+        </div>
+    </section><!-- End Portfolio Section -->
+
+</main>
+{% endblock %}

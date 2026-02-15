@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Services - Sani Yadav Portfolio{% endblock %}
+
+{% block content %}
+<main class="main">
+
+    <!-- Page Title -->
+    <div class="page-title dark-background">
+        <div class="container d-lg-flex justify-content-between align-items-center">
+            <h1 class="mb-2 mb-lg-0">Services</h1>
+            <nav class="breadcrumbs">
+                <ol>
+                    <li><a href="{% url 'home' %}">Home</a></li>
+                    <li class="current">Services</li>
+                </ol>
+            </nav>
+        </div>
+    </div><!-- End Page Title -->
+
+    <!-- Services Section -->
+    <section id="services" class="services section">
+
+        <!-- Section Title -->
+        <div class="container section-title" data-aos="fade-up">
+            <h2>My Services</h2>
+            <p>I offer professional web and software development services tailored to modern business needs.</p>
+        </div><!-- End Section Title -->
+
+        <div class="container">
+            <div class="row gy-4">
+                {% for service in services %}
+                <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up"
+                    data-aos-delay="{{ forloop.counter }}00">
+                    <div class="icon flex-shrink-0"><i class="bi bi-briefcase"></i></div>
+                    <div>
+                        <h4 class="title"><a href="{% url 'service_details' %}?service={{ service.title|slugify }}"
+                                class="stretched-link">{{ service.title }}</a></h4>
+                        <p class="description">{{ service.description }}</p>
+                    </div>
+                </div><!-- End Service Item -->
+                {% endfor %}
+            </div>
+        </div>
+    </section><!-- /Services Section -->
+
+</main>
+{% endblock %}

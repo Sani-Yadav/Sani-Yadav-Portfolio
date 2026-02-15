@@ -1,0 +1,339 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <!-- Primary Meta Tags -->
+    <title>E-commerce Project | Sani Yadav - Full Stack Python Developer</title>
+    <meta name="description"
+      content="E-commerce project developed by Sani Yadav. Built with Django, React, and modern web technologies. Features product catalog, cart functionality, and secure payment integration.">
+    <meta name="keywords"
+      content="E-commerce, Django, React, Python Developer, Web Development, Online Store, Sani Yadav, Portfolio Project">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://www.saniyadav.dev/project/ecommerce" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.saniyadav.dev/project/ecommerce">
+    <meta property="og:title" content="E-commerce Project | Sani Yadav - Full Stack Python Developer">
+    <meta property="og:description"
+      content="E-commerce project developed by Sani Yadav. Built with Django, React, and modern web technologies. Features product catalog, cart functionality, and secure payment integration.">
+    <meta property="og:image" content="https://www.saniyadav.dev/static/img/projects/ecommerce-preview.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.saniyadav.dev/project/ecommerce">
+    <meta property="twitter:title" content="E-commerce Project | Sani Yadav - Full Stack Python Developer">
+    <meta property="twitter:description"
+      content="E-commerce project developed by Sani Yadav. Built with Django, React, and modern web technologies. Features product catalog, cart functionality, and secure payment integration.">
+    <meta property="twitter:image" content="https://www.saniyadav.dev/static/img/projects/ecommerce-preview.jpg">
+
+    <!-- Favicons -->
+    <link href="{% static 'img/sani2.0.jpg' %}" rel="icon">
+    <link href="{% static 'img/sani2.jpg' %}" rel="apple-touch-icon">
+
+    <!-- Font Awesome & Bootstrap -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=Poppins:wght@300;400;500;600;700;800&family=Raleway:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="{% static 'vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+    <link href="{% static 'vendor/aos/aos.css' %}" rel="stylesheet">
+    <link href="{% static 'vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
+    <link href="{% static 'vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+
+    <!-- Main CSS File -->
+    <link href="{% static 'css/main.css' %}" rel="stylesheet">
+  </head>
+
+  <body class="project-page" itemscope itemtype="https://schema.org/WebPage">
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareSourceCode",
+    "name": "E-commerce Website",
+    "description": "A fully functional e-commerce platform with product catalog, shopping cart, and secure payment processing.",
+    "programmingLanguage": ["Python", "JavaScript"],
+    "codeRepository": "https://github.com/saniyadav/ecommerce-project",
+    "applicationCategory": "E-commerce Platform",
+    "operatingSystem": "Any",
+    "offers": {
+      "@type": "Offer",
+      "url": "https://www.saniyadav.dev/project/ecommerce"
+    },
+    "author": {
+      "@type": "Person",
+      "name": "Sani Yadav",
+      "url": "https://www.saniyadav.dev"
+    },
+    "keywords": ["ecommerce", "django", "react", "python", "web development"],
+    "dateCreated": "2024-01-15",
+    "dateModified": "2024-08-20"
+  }
+  </script>
+
+    <!-- ======= Header ======= -->
+    <header id="header" class="header d-flex flex-column">
+      <i class="header-toggle d-xl-none bi bi-list"></i>
+
+      <div class="profile-img">
+        <img src="{% static 'img/sani2.jpg' %}" alt="Profile" class="img-fluid rounded-circle">
+      </div>
+
+      <a href="{% url 'home' %}" class="logo d-flex align-items-center justify-content-center">
+        <h1 class="sitename">Sani Yadav</h1>
+      </a>
+
+      <div class="social-links text-center">
+        <a href="https://x.com/imsaniydv2?s=09" class="twitter"><i class="bi bi-twitter-x"></i></a>
+        <a href="https://www.freelancer.com/u/imsaniydv" class="freelancer-link"><i class="bi bi-briefcase"></i></a>
+        <a href="https://www.instagram.com/imsani2.0" class="instagram"><i class="bi bi-instagram"></i></a>
+        <a href="https://github.com/Sani-Yadav?tab=repositories" class="github"><i class="bi bi-github"></i></a>
+        <a href="https://www.linkedin.com/in/sani-yadav-986778292" class="linkedin" target="_blank"
+          rel="noopener noreferrer">
+          <i class="bi bi-linkedin"></i>
+        </a>
+      </div>
+
+      <!-- Navigation Menu -->
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="{% url 'home' %}#hero" class="active"><i class="bi bi-house navicon"></i> Home</a></li>
+          <li><a href="{% url 'home' %}#about"><i class="bi bi-person navicon"></i> About</a></li>
+          <li><a href="{% url 'home' %}#resume"><i class="bi bi-file-earmark-text navicon"></i> Resume</a></li>
+          <li><a href="{% url 'home' %}#portfolio"><i class="bi bi-images navicon"></i> Portfolio</a></li>
+          <li><a href="{% url 'home' %}#services"><i class="bi bi-hdd-stack navicon"></i> Services</a></li>
+          <li><a href="{% url 'job' %}"><i class="fa-solid fa-building-columns"></i> Jobs</a></li>
+
+          <li class="dropdown"><a href="#"><i class="bi bi-menu-button navicon"></i> <span>My Projects</span>
+              <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="quicksupport.html">Quicksupport</a></li>
+              <li class="dropdown"><a href="#"><span>New Projects</span> <i
+                    class="bi bi-chevron-down toggle-dropdown"></i></a>
+                <ul>
+                  <li><a href="https://kltech.netlify.app/">KLTech IT Solutions</a></li>
+                  <li><a href="https://skyapnahostel.netlify.app/contact?">Apna Hostel</a></li>
+                  <li><a href="https://tirnetracctv.netlify.app/">TIRNETRAC CCTV</a></li>
+                  <li><a href="https://yadavdairy.netlify.app/">Yadav Dairy</a></li>
+                  <li><a href="https://nyayapath.netlify.app/">Nyayapath</a></li>
+                  <li><a href="https://dolistp.netlify.app/">Todo List</a></li>
+                </ul>
+              </li>
+              <li><a href="https://skbites.netlify.app/">SK Bites</a></li>
+              <li><a href="https://prorentcar.netlify.app/">Pro Rent Car</a></li>
+              <li><a href="https://klyadav.netlify.app/">K L Yadav</a></li>
+              <li><a href="https://lernsky.netlify.app/">Lernsky</a></li>
+              <li><a href="https://saniyadav.netlify.app/">Sani Yadav Official</a></li>
+            </ul>
+          </li>
+
+          <li><a href="#contact"><i class="bi bi-envelope navicon"></i> Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <!-- End Header -->
+
+    <main class="main" role="main">
+      <!-- Schema.org BreadcrumbList -->
+      <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.saniyadav.dev/"
+      },{
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Portfolio",
+        "item": "https://www.saniyadav.dev/#portfolio"
+      },{
+        "@type": "ListItem",
+        "position": 3,
+        "name": "E-commerce Project"
+      }]
+    }
+    </script>
+
+      <!-- Project Header -->
+      <div class="page-title dark-background">
+        <div class="container">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="{% url 'home' %}">Home</a></li>
+              <li class="breadcrumb-item"><a href="{% url 'home' %}#portfolio">Portfolio</a></li>
+              <li class="breadcrumb-item active" aria-current="page">E-commerce Project</li>
+            </ol>
+          </nav>
+          <h1 class="mb-3">E-commerce Project</h1>
+          <p class="lead">A complete online shopping solution with product catalog and secure checkout</p>
+          <div class="project-meta">
+            <span class="badge bg-primary me-2">Django</span>
+            <span class="badge bg-success me-2">React</span>
+            <span class="badge bg-info me-2">PostgreSQL</span>
+            <span class="badge bg-warning">Stripe</span>
+          </div>
+          <li><a href="{% url 'home' %}">Home</a></li>
+          <li class="current">Projects Details</li>
+          </ol>
+          </nav>
+        </div>
+      </div>
+      <!-- End Page Title -->
+
+      <!-- Portfolio Details Section -->
+      <section id="portfolio-details" class="portfolio-details section">
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+          <div class="row gy-4">
+
+            <div class="col-lg-8">
+              <div class="portfolio-details-slider swiper init-swiper">
+                <script type="application/json" class="swiper-config">
+                {
+                  "loop": true,
+                  "speed": 600,
+                  "autoplay": { "delay": 5000 },
+                  "slidesPerView": "auto",
+                  "pagination": {
+                    "el": ".swiper-pagination",
+                    "type": "bullets",
+                    "clickable": true
+                  }
+                }
+              </script>
+
+                <div class="swiper-wrapper align-items-center">
+                  <div class="swiper-slide">
+                    <img src="{% static 'img/amz04.jpg' %}"
+                      alt="AmazonPro E-commerce Homepage - Product showcase with navigation" class="img-fluid">
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="{% static 'img/amz01.jpg' %}"
+                      alt="AmazonPro Product Listing Page - Category view with filters" class="img-fluid">
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="{% static 'img/amz02.jpg' %}"
+                      alt="AmazonPro Product Details - Item description and purchase options" class="img-fluid">
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="{% static 'img/amz03.jpg' %}"
+                      alt="AmazonPro Shopping Cart - Order summary and checkout process" class="img-fluid">
+                  </div>
+                </div>
+                <div class="swiper-pagination"></div>
+              </div>
+            </div>
+
+            <div class="col-lg-4">
+              <div class="portfolio-info" data-aos="fade-up" data-aos-delay="200" itemscope
+                itemtype="https://schema.org/WebApplication">
+                <h3>Project Information</h3>
+                <ul>
+                  <li><strong>Category:</strong> <span itemprop="applicationCategory">E-commerce Platform</span></li>
+                  <li><strong>Technologies:</strong>
+                    <span itemprop="applicationSubCategory">Django, React, PostgreSQL, Stripe</span>
+                  </li>
+                  <li><strong>Project Date:</strong>
+                    <time datetime="2025-03-02" itemprop="dateCreated">March 02, 2025</time>
+                  </li>
+                  <li><strong>Live Demo:</strong>
+                    <a href="https://amozonpro.netlify.app/" target="_blank" rel="noopener noreferrer" itemprop="url">
+                      AmazonPro Live Demo
+                    </a>
+                  </li>
+                  <li><strong>GitHub:</strong>
+                    <a href="https://github.com/saniyadav/amazonpro" target="_blank" rel="noopener noreferrer nofollow">
+                      View Source Code
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="portfolio-description" data-aos="fade-up" data-aos-delay="300">
+                <h2 itemprop="name">AmazonPro E-commerce Platform</h2>
+                <p itemprop="description">
+                  AmazonPro is a feature-rich e-commerce platform that replicates core functionalities of Amazon.
+                  Built with modern web technologies, it provides a seamless shopping experience with real-time
+                  inventory management and secure payment processing.
+                </p>
+
+                <h3 class="mt-4">Key Features</h3>
+                <ul class="feature-list" itemprop="featureList">
+                  <li>User Authentication & Authorization</li>
+                  <li>Product Catalog with Categories</li>
+                  <li>Shopping Cart Management</li>
+                  <li>Secure Checkout Process</li>
+                  <li>Order History & Tracking</li>
+                  <li>Responsive Design</li>
+                </ul>
+
+                <div class="mt-4" itemprop="technology" content="Django, React, PostgreSQL">
+                  <h4>Technical Stack</h4>
+                  <div class="tech-stack">
+                    <span class="badge bg-primary me-2">Django REST Framework</span>
+                    <span class="badge bg-info me-2">React.js</span>
+                    <span class="badge bg-success me-2">PostgreSQL</span>
+                    <span class="badge bg-warning me-2">Stripe API</span>
+                    <span class="badge bg-secondary">AWS S3</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+      <!-- End Portfolio Details Section -->
+    </main>
+
+    <!-- Footer -->
+    <footer id="footer" class="footer position-relative light-background">
+      <div class="container text-center">
+        <div class="copyright">
+          <p>© <span>2025</span> <strong class="px-1 sitename">Portfolio</strong>. All Rights Reserved.</p>
+        </div>
+        <div class="credits">
+          Designed by <a href="https://amozonpro.netlify.app/" target="_blank">AmazonPro</a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scroll Top -->
+    <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center">
+      <i class="bi bi-arrow-up-short"></i>
+    </a>
+
+    <!-- Preloader -->
+    <div id="preloader"></div>
+
+    <!-- Vendor JS Files -->
+    <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'vendor/php-email-form/validate.js' %}"></script>
+    <script src="{% static 'vendor/aos/aos.js' %}"></script>
+    <script src="{% static 'vendor/typed.js/typed.umd.js' %}"></script>
+    <script src="{% static 'vendor/purecounter/purecounter_vanilla.js' %}"></script>
+    <script src="{% static 'vendor/waypoints/noframework.waypoints.js' %}"></script>
+    <script src="{% static 'vendor/glightbox/js/glightbox.min.js' %}"></script>
+    <script src="{% static 'vendor/imagesloaded/imagesloaded.pkgd.min.js' %}"></script>
+    <script src="{% static 'vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
+    <script src="{% static 'vendor/swiper/swiper-bundle.min.js' %}"></script>
+
+    <!-- Main JS File -->
+    <script src="{% static 'js/main.js' %}"></script>
+  </body>
+
+</html>
