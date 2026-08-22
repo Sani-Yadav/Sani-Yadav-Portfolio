@@ -57,6 +57,9 @@
   </head>
 
   <body class="project-page" itemscope itemtype="https://schema.org/WebPage">
+    <button id="theme-toggle" class="dark-mode-toggle" aria-label="Toggle Dark Mode">
+      <i class="bi bi-moon"></i>
+    </button>
 
     <!-- JSON-LD Structured Data -->
     <script type="application/ld+json">
@@ -116,7 +119,6 @@
           <li><a href="{% url 'home' %}#portfolio"><i class="bi bi-images navicon"></i> Portfolio</a></li>
           <li><a href="{% url 'home' %}#certifications"><i class="bi bi-award navicon"></i> Certifications</a></li>
           <li><a href="{% url 'home' %}#services"><i class="bi bi-hdd-stack navicon"></i> Services</a></li>
-          <li><a href="{% url 'job' %}"><i class="fa-solid fa-building-columns"></i> Jobs</a></li>
 
           <li class="dropdown"><a href="#"><i class="bi bi-menu-button navicon"></i> <span>My Projects</span>
               <i class="bi bi-chevron-down toggle-dropdown"></i></a>
@@ -335,6 +337,7 @@
 
     <!-- Main JS File -->
     <script src="{% static 'js/main.js' %}"></script>
+    <script src="{% static 'js/theme.js' %}"></script>
   </body>
 
 </html>

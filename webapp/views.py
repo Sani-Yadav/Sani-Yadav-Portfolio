@@ -24,6 +24,7 @@ def contact(request):
         name = request.POST.get('user_name')    
         email = request.POST.get('user_email')  
         phone = request.POST.get('phone')  
+        subject = request.POST.get('subject')
         message = request.POST.get('message')
 
         try:
@@ -32,6 +33,7 @@ def contact(request):
                 name=name,
                 email=email,
                 phone=phone,
+                subject=subject,
                 message=message,
             )
 
@@ -39,7 +41,7 @@ def contact(request):
                 # Send email to admin
                 admin_email_sent = send_mail(
                     subject=f"New Contact Form Submission - {name}",
-                    message=f"Name: {name}\nEmail: {email}\nPhone: {phone}\n\nMessage:\n{message}",
+                    message=f"Name: {name}\nEmail: {email}\nPhone: {phone}\nSubject: {subject}\n\nMessage:\n{message}",
                     from_email=settings.EMAIL_HOST_USER,
                     recipient_list=[settings.EMAIL_HOST_USER],
                     fail_silently=False,
@@ -112,10 +114,6 @@ def portfolio(request):
 # PORTFOLIO DETAILS 
 def portfolio_details(request):
     return render(request, 'portfolio-details.html')
-
-# JOB PAGE
-def job(request):
-    return render(request, 'job.html')
 
 # PROJECT 2 PAGE
 def project2(request):

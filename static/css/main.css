@@ -499,16 +499,43 @@ h6 {
   padding: 40px 0;
   position: relative;
   border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+  overflow: visible;
+}
+
+.footer .footer-content {
+  width: 100%;
+  max-width: 100%;
+  padding: 0 20px;
+  text-align: center;
 }
 
 .footer .copyright p {
   margin-bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px 14px;
+  line-height: 1.6;
+}
+
+.footer .copyright strong {
+  font-weight: 700;
 }
 
 .footer .credits {
-  margin-top: 4px;
+  margin-top: 12px;
   font-size: 13px;
   text-align: center;
+  color: color-mix(in srgb, var(--default-color), transparent 28%);
+}
+
+.footer .credits p {
+  margin-bottom: 0;
+}
+
+.footer .credits strong {
+  color: var(--default-color);
 }
 
 /*--------------------------------------------------------------
@@ -1173,10 +1200,38 @@ section,
 /*--------------------------------------------------------------
 # Contact Section
 --------------------------------------------------------------*/
+.contact .section-kicker {
+  display: inline-block;
+  color: var(--accent-color);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.contact .section-title h1 {
+  margin-bottom: 12px;
+}
+
+.contact .section-title .lead {
+  max-width: 620px;
+  margin: 0 auto;
+}
+
 .contact .info-wrap {
   background-color: var(--surface-color);
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
   padding: 30px;
+  border: 1px solid color-mix(in srgb, var(--default-color), transparent 88%);
+  border-radius: 8px;
+}
+
+.contact .contact-panel-intro {
+  color: color-mix(in srgb, var(--default-color), transparent 25%);
+  font-size: 15px;
+  line-height: 1.7;
+  margin: 0 0 28px;
 }
 
 @media (max-width: 575px) {
@@ -1226,6 +1281,8 @@ section,
   height: 100%;
   padding: 30px;
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  border: 1px solid color-mix(in srgb, var(--default-color), transparent 88%);
+  border-radius: 8px;
 }
 
 @media (max-width: 575px) {
@@ -1244,12 +1301,20 @@ section,
   color: var(--default-color);
   background-color: var(--surface-color);
   border-color: color-mix(in srgb, var(--default-color), transparent 80%);
+  min-height: 48px;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.contact .php-email-form textarea {
+  min-height: 140px;
+  resize: vertical;
 }
 
 .contact .php-email-form input[type=text]:focus,
 .contact .php-email-form input[type=email]:focus,
 .contact .php-email-form textarea:focus {
   border-color: var(--accent-color);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent-color), transparent 82%);
 }
 
 .contact .php-email-form input[type=text]::placeholder,
@@ -1269,6 +1334,11 @@ section,
 
 .contact .php-email-form button[type=submit]:hover {
   background: color-mix(in srgb, var(--accent-color), transparent 25%);
+}
+
+.contact .contact-form-card button[type=submit] {
+  min-width: 170px;
+  font-weight: 600;
 }
 
 /*--------------------------------------------------------------
@@ -1425,9 +1495,51 @@ img.img-fluid.rounded-circle {
 
 
 .social-media {
-  height: 50px;
-  font-size: x-large;
-  margin: 20px;
+  margin: 26px 0 0;
+  text-align: center;
+  display: block;
+  position: relative;
+  z-index: 1;
+}
+
+.social-media .social-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 0;
+  gap: 12px;
+}
+
+.social-media .social-links a {
+  width: 40px;
+  height: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid color-mix(in srgb, var(--default-color), transparent 78%);
+  border-radius: 50%;
+  color: var(--default-color);
+  font-size: 18px;
+  transition: color 0.25s ease, background-color 0.25s ease, transform 0.25s ease;
+}
+
+.social-media .social-links a:hover {
+  color: var(--contrast-color);
+  background-color: var(--accent-color);
+  border-color: var(--accent-color);
+  transform: translateY(-3px);
+}
+
+@media (max-width: 575px) {
+  .footer .copyright p {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .social-media .social-links {
+    gap: 9px;
+  }
 }
  
 .divf {
