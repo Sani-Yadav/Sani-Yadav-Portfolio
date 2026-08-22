@@ -148,12 +148,13 @@
           <li><a href="#about"><i class="bi bi-person navicon"></i> About</a></li>
           <li><a href="#resume"><i class="bi bi-file-earmark-text navicon"></i> Resume</a></li>
           <li><a href="#portfolio"><i class="bi bi-images navicon"></i> Portfolio</a></li>
+          <li><a href="#certifications"><i class="bi bi-award navicon"></i> Certifications</a></li>
           <li><a href="#services"><i class="bi bi-hdd-stack navicon"></i> Services</a></li>
           <li><a href="job.html"><i class="fa-solid fa-building-columns"></i>Jobs</a></li>
           <li class="dropdown"><a href="#"><i class="bi bi-menu-button navicon"></i> <span>My Projects</span> <i
                 class="bi bi-chevron-down toggle-dropdown"></i></a>
             <ul>
-              <li><a href="https://kltech-itsolutions-01.onrender.com/">KLTech it solutions Project</a></li>
+              <li><a href="https://kltechsolutions.onrender.com/">KLTech it solutions Project</a></li>
               <li class="dropdown"><a href="#"><span>New Projects</span> <i
                     class="bi bi-chevron-down toggle-dropdown"></i></a>
                 <ul>
@@ -597,6 +598,229 @@
           </div>
         </div>
       </section><!-- /Resume Section -->
+
+      <!-- Certifications Section -->
+      <section id="certifications" class="certifications section">
+        <!-- Section Title -->
+        <div class="container section-title" data-aos="fade-up">
+          <h2>Certifications</h2>
+          <p>My professional certifications and achievements.</p>
+        </div><!-- End Section Title -->
+
+        <style>
+          .cert-card {
+            transition: all 0.3s ease;
+          }
+
+          .cert-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15) !important;
+          }
+
+          .cert-img-container {
+            position: relative;
+            border-radius: 8px;
+            overflow: hidden;
+            height: 190px;
+            background-color: rgba(0, 0, 0, 0.03);
+            border: 1px solid rgba(0, 0, 0, 0.08);
+          }
+
+          .cert-img-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.4);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            text-decoration: none;
+          }
+
+          .cert-img-container:hover .cert-img-overlay {
+            opacity: 1;
+          }
+        </style>
+
+        <div class="container">
+          <div class="row gy-4">
+
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+              <div class="card h-100 shadow-sm border-0 cert-card"
+                style="border-radius: 10px; background-color: var(--surface-color); padding: 15px;">
+                <div class="cert-img-container mb-3">
+                  <img src="{% static 'img/cert_pw_microsoft.jpg' %}" class="w-100 h-100" style="object-fit: cover;"
+                    alt="Generative AI for All">
+                  <a href="{% static 'img/cert_pw_microsoft.jpg' %}" class="glightbox cert-img-overlay"
+                    data-gallery="certifications" title="Generative AI for All - PhysicsWallah × Microsoft">
+                    <span class="btn btn-light btn-sm fw-bold"><i class="bi bi-zoom-in me-1"></i> View Full</span>
+                  </a>
+                </div>
+                <div class="card-body text-center p-0 d-flex flex-column justify-content-between">
+                  <div>
+                    <h4 class="card-title fw-bold fs-5 mb-2" style="color: var(--heading-color);">Generative AI for All
+                    </h4>
+                    <p class="card-text mb-1" style="color: var(--default-color);"><em>PhysicsWallah × Microsoft</em>
+                    </p>
+                    <h6 class="mb-3" style="color: var(--accent-color); font-size: 0.9rem;">Aug 2026</h6>
+                  </div>
+                  <a href="{% static 'img/cert_pw_microsoft.jpg' %}"
+                    class="glightbox btn btn-outline-primary btn-sm mt-auto w-100" data-gallery="certifications"
+                    title="Generative AI for All - PhysicsWallah × Microsoft">
+                    <i class="bi bi-eye me-1"></i> View Certificate
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+              <div class="card h-100 shadow-sm border-0 cert-card"
+                style="border-radius: 10px; background-color: var(--surface-color); padding: 15px;">
+                <div class="cert-img-container mb-3">
+                  <img src="{% static 'img/cert_anthropic.jpg' %}" class="w-100 h-100" style="object-fit: cover;"
+                    alt="AI Fluency for Students">
+                  <a href="{% static 'img/cert_anthropic.jpg' %}" class="glightbox cert-img-overlay"
+                    data-gallery="certifications" title="AI Fluency for Students - Anthropic">
+                    <span class="btn btn-light btn-sm fw-bold"><i class="bi bi-zoom-in me-1"></i> View Full</span>
+                  </a>
+                </div>
+                <div class="card-body text-center p-0 d-flex flex-column justify-content-between">
+                  <div>
+                    <h4 class="card-title fw-bold fs-5 mb-2" style="color: var(--heading-color);">AI Fluency for
+                      Students</h4>
+                    <p class="card-text mb-1" style="color: var(--default-color);"><em>Anthropic</em></p>
+                    <h6 class="mb-3" style="color: var(--accent-color); font-size: 0.9rem;">March 2026</h6>
+                  </div>
+                  <a href="{% static 'img/cert_anthropic.jpg' %}"
+                    class="glightbox btn btn-outline-primary btn-sm mt-auto w-100" data-gallery="certifications"
+                    title="AI Fluency for Students - Anthropic">
+                    <i class="bi bi-eye me-1"></i> View Certificate
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+              <div class="card h-100 shadow-sm border-0 cert-card"
+                style="border-radius: 10px; background-color: var(--surface-color); padding: 15px;">
+                <div class="cert-img-container mb-3">
+                  <img src="{% static 'img/cert_softflew.jpg' %}" class="w-100 h-100" style="object-fit: cover;"
+                    alt="Full Stack Python Developer">
+                  <a href="{% static 'img/cert_softflew.jpg' %}" class="glightbox cert-img-overlay"
+                    data-gallery="certifications" title="Full Stack Python Developer - Softflew">
+                    <span class="btn btn-light btn-sm fw-bold"><i class="bi bi-zoom-in me-1"></i> View Full</span>
+                  </a>
+                </div>
+                <div class="card-body text-center p-0 d-flex flex-column justify-content-between">
+                  <div>
+                    <h4 class="card-title fw-bold fs-5 mb-2" style="color: var(--heading-color);">Full Stack Python
+                      Developer</h4>
+                    <p class="card-text mb-1" style="color: var(--default-color);"><em>Softflew</em></p>
+                    <h6 class="mb-3" style="color: var(--accent-color); font-size: 0.9rem;">Credential ID: SFLW00162
+                    </h6>
+                  </div>
+                  <a href="{% static 'img/cert_softflew.jpg' %}"
+                    class="glightbox btn btn-outline-primary btn-sm mt-auto w-100" data-gallery="certifications"
+                    title="Full Stack Python Developer - Softflew">
+                    <i class="bi bi-eye me-1"></i> View Certificate
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+              <div class="card h-100 shadow-sm border-0 cert-card"
+                style="border-radius: 10px; background-color: var(--surface-color); padding: 15px;">
+                <div class="cert-img-container mb-3">
+                  <img src="{% static 'img/powerbi.png' %}" class="w-100 h-100" style="object-fit: cover;"
+                    alt="Power BI Course Completion">
+                  <a href="{% static 'img/powerbi.png' %}" class="glightbox cert-img-overlay"
+                    data-gallery="certifications" title="Power BI Course Completion - Learn More Pro">
+                    <span class="btn btn-light btn-sm fw-bold"><i class="bi bi-zoom-in me-1"></i> View Full</span>
+                  </a>
+                </div>
+                <div class="card-body text-center p-0 d-flex flex-column justify-content-between">
+                  <div>
+                    <h4 class="card-title fw-bold fs-5 mb-2" style="color: var(--heading-color);">Power BI Course
+                      Completion</h4>
+                    <p class="card-text mb-1" style="color: var(--default-color);"><em>Learn More Pro</em></p>
+                    <h6 class="mb-3" style="color: var(--accent-color); font-size: 0.9rem;">Oct 2025</h6>
+                  </div>
+                  <a href="{% static 'img/powerbi.png' %}"
+                    class="glightbox btn btn-outline-primary btn-sm mt-auto w-100" data-gallery="certifications"
+                    title="Power BI Course Completion - Learn More Pro">
+                    <i class="bi bi-eye me-1"></i> View Certificate
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
+              <div class="card h-100 shadow-sm border-0 cert-card"
+                style="border-radius: 10px; background-color: var(--surface-color); padding: 15px;">
+                <div class="cert-img-container mb-3">
+                  <img src="{% static 'img/bestprojecte.png' %}" class="w-100 h-100" style="object-fit: cover;"
+                    alt="Best Project Winner">
+                  <a href="{% static 'img/bestprojecte.png' %}" class="glightbox cert-img-overlay"
+                    data-gallery="certifications" title="🏆 Best Project Winner — Siphar Web Academy">
+                    <span class="btn btn-light btn-sm fw-bold"><i class="bi bi-zoom-in me-1"></i> View Full</span>
+                  </a>
+                </div>
+                <div class="card-body text-center p-0 d-flex flex-column justify-content-between">
+                  <div>
+                    <h4 class="card-title fw-bold fs-5 mb-2" style="color: var(--heading-color);">🏆 Best Project Winner
+                    </h4>
+                    <p class="card-text mb-1" style="color: var(--default-color);"><em>Siphar Web Academy</em></p>
+                    <p class="card-text text-muted mb-2" style="font-size: 0.85rem; line-height: 1.3;">Recognized at Dr.
+                      A.P.J. Abdul Kalam Technical University (AKTU), Lucknow</p>
+                    <h6 class="mb-3" style="color: var(--accent-color); font-size: 0.9rem;">Nov 2025</h6>
+                  </div>
+                  <a href="{% static 'img/bestprojecte.png' %}"
+                    class="glightbox btn btn-outline-primary btn-sm mt-auto w-100" data-gallery="certifications"
+                    title="🏆 Best Project Winner — Siphar Web Academy">
+                    <i class="bi bi-eye me-1"></i> View Certificate
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
+              <div class="card h-100 shadow-sm border-0 cert-card"
+                style="border-radius: 10px; background-color: var(--surface-color); padding: 15px;">
+                <div class="cert-img-container mb-3">
+                  <img src="{% static 'img/seminarclg.jpg' %}" class="w-100 h-100" style="object-fit: cover;"
+                    alt="Seminar Participation">
+                  <a href="{% static 'img/seminarclg.jpg' %}" class="glightbox cert-img-overlay"
+                    data-gallery="certifications" title="🎓 Seminar Participation — KNIPSS">
+                    <span class="btn btn-light btn-sm fw-bold"><i class="bi bi-zoom-in me-1"></i> View Full</span>
+                  </a>
+                </div>
+                <div class="card-body text-center p-0 d-flex flex-column justify-content-between">
+                  <div>
+                    <h4 class="card-title fw-bold fs-5 mb-2" style="color: var(--heading-color);">🎓 Seminar
+                      Participation</h4>
+                    <p class="card-text mb-1" style="color: var(--default-color);"><em>KNIPSS, Sultanpur</em></p>
+                    <p class="card-text text-muted mb-2" style="font-size: 0.85rem; line-height: 1.3;">Kamla Nehru
+                      Institute of Physical & Social Sciences</p>
+                    <h6 class="mb-3" style="color: var(--accent-color); font-size: 0.9rem;">Certificate of Participation
+                      | 2023</h6>
+                  </div>
+                  <a href="{% static 'img/seminarclg.jpg' %}"
+                    class="glightbox btn btn-outline-primary btn-sm mt-auto w-100" data-gallery="certifications"
+                    title="🎓 Seminar Participation — KNIPSS">
+                    <i class="bi bi-eye me-1"></i> View Certificate
+                  </a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section><!-- /Certifications Section -->
 
       <!-- Portfolio Section -->
       <section id="portfolio" class="portfolio section light-background">

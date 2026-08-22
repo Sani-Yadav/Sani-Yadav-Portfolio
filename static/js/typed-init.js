@@ -4,9 +4,9 @@ document.addEventListener('DOMContentLoaded', function() {
     try {
       new Typed('.typed', {
         strings: ['Full Stack Python Developer', 'Freelancer', 'Web Designer'],
-        typeSpeed: 100,
-        backSpeed: 50,
-        backDelay: 3000,
+        typeSpeed: 150,
+        backSpeed: 30,
+        backDelay: 2500,
         loop: true
       });
     } catch (e) {

@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const icon = themeToggle ? themeToggle.querySelector('i') : null;
 
     // Check for saved user preference, if any, on load of the website
-    const currentTheme = localStorage.getItem('theme') || 'light';
+    const currentTheme = localStorage.getItem('theme') || 'dark';
 
     // Apply valid theme to document
     if (currentTheme === 'dark') {

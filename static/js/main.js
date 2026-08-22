@@ -1,11 +1,11 @@
 
 
-(function() {
+(function () {
   "use strict";
 
   // Header toggle functionality
   const headerToggleBtn = document.querySelector('.header-toggle');
-  
+
   if (headerToggleBtn) {
     function headerToggle() {
       const header = document.querySelector('#header');
@@ -15,7 +15,7 @@
         headerToggleBtn.classList.toggle('bi-x');
       }
     }
-    
+
     headerToggleBtn.addEventListener('click', headerToggle);
 
     // Close mobile menu when clicking on nav links
@@ -30,7 +30,7 @@
 
   // Mobile nav dropdowns
   document.querySelectorAll('.navmenu .toggle-dropdown').forEach(dropdown => {
-    dropdown.addEventListener('click', function(e) {
+    dropdown.addEventListener('click', function (e) {
       e.preventDefault();
       const parent = this.parentNode;
       if (parent) {
@@ -61,7 +61,7 @@
         scrollTop.classList.remove('active');
       }
     }
-    
+
     scrollTop.addEventListener('click', (e) => {
       e.preventDefault();
       window.scrollTo({
@@ -94,9 +94,9 @@
           new Typed('.typed', {
             strings: typedStrings.split(','),
             loop: true,
-            typeSpeed: 100,
-            backSpeed: 50,
-            backDelay: 2000
+            typeSpeed: 150,
+            backSpeed: 30,
+            backDelay: 2500
           });
         } catch (e) {
           console.error('Error initializing Typed.js:', e);
@@ -118,7 +118,7 @@
         new Waypoint({
           element: section,
           offset: '80%',
-          handler: function() {
+          handler: function () {
             const progressBars = section.querySelectorAll('.progress .progress-bar');
             progressBars.forEach(bar => {
               if (bar.getAttribute('aria-valuenow')) {
@@ -147,7 +147,7 @@
       const isotopeContainer = container.querySelector('.isotope-container');
 
       if (isotopeContainer) {
-        imagesLoaded(isotopeContainer, function() {
+        imagesLoaded(isotopeContainer, function () {
           const iso = new Isotope(isotopeContainer, {
             itemSelector: '.isotope-item',
             layoutMode: layout,
@@ -159,16 +159,16 @@
           const filterButtons = container.querySelectorAll('.isotope-filters li');
           if (filterButtons.length > 0) {
             filterButtons.forEach(button => {
-              button.addEventListener('click', function() {
+              button.addEventListener('click', function () {
                 const activeButton = container.querySelector('.isotope-filters .filter-active');
                 if (activeButton) {
                   activeButton.classList.remove('filter-active');
                 }
                 this.classList.add('filter-active');
-                
+
                 const filterValue = this.getAttribute('data-filter') || '*';
                 iso.arrange({ filter: filterValue });
-                
+
                 // Refresh AOS after filtering
                 if (typeof AOS !== 'undefined') {
                   AOS.refresh();
@@ -231,7 +231,7 @@
 
   // Handle initial page load with hash
   window.addEventListener('load', handleHashNavigation);
-  
+
   // Handle browser back/forward navigation
   window.addEventListener('popstate', handleHashNavigation);
 
@@ -239,21 +239,21 @@
   function setupScrollspy() {
     const navLinks = document.querySelectorAll('.nav-link');
     const sections = document.querySelectorAll('section[id]');
-    
+
     if (navLinks.length === 0 || sections.length === 0) return;
-    
+
     function updateActiveNav() {
       let currentSection = '';
-      
+
       sections.forEach(section => {
         const sectionTop = section.offsetTop - 100;
         const sectionHeight = section.offsetHeight;
-        
+
         if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
           currentSection = section.getAttribute('id');
         }
       });
-      
+
       navLinks.forEach(link => {
         link.classList.remove('active');
         if (link.getAttribute('href') === `#${currentSection}`) {
@@ -261,11 +261,11 @@
         }
       });
     }
-    
+
     window.addEventListener('scroll', updateActiveNav);
     updateActiveNav(); // Run once on load
   }
-  
+
   // Initialize scrollspy after page load
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', setupScrollspy);
